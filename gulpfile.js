@@ -8,11 +8,13 @@ const { src, dest, parallel, series} = require('gulp');
 const imagemin = require('gulp-imagemin');
 const cleancss = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
+const sass = require('gulp-sass');
 
 /*** Source and destination folders ***/
 const srcImg = 'src/img/**/*';  // ** (wildcard) means include all file in current folders and its subfolders
 const destImg = 'public/img';
 const srcCss = 'src/css/**/*.css';
+const srcScss = "src/css/**/*.scss";
 const destCss = 'public/css';
 
 
@@ -32,8 +34,15 @@ function compresscss() {
     .pipe(dest(destCss))
 }
 
+function convertsasstocss() {
+  return src(srcScss)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(dest(destCss));
+}
+
 exports.compressimg = compressimg;  // The name of the tasks runner and export it
 exports.compresscss = compresscss;
+exports.convertsasstocss = convertsasstocss;
 
 /* series() - Combines task functions and/or composed operations into larger operations that will be executed one after another, in sequential order.
  * parallel() - Combines task functions and/or composed operations into larger operations that will be executed simultaneously.

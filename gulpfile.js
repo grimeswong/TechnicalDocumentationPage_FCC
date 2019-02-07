@@ -4,7 +4,7 @@
  *
  **/
 
-const { src, dest, parallel, series} = require('gulp');
+const { src, dest, watch, parallel, series} = require('gulp');
 const imagemin = require('gulp-imagemin');
 const cleancss = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
@@ -40,9 +40,17 @@ function convertsasstocss() {
     .pipe(dest(destCss));
 }
 
+function watchsass() {
+  watch([srcScss], convertsasstocss)
+  .on('change', (path, stats) => {
+    console.log(`Sass files in ${path} are converting to css file ...`);
+  });
+}
+
 exports.compressimg = compressimg;  // The name of the tasks runner and export it
 exports.compresscss = compresscss;
 exports.convertsasstocss = convertsasstocss;
+exports.watchsass = watchsass;
 
 /* series() - Combines task functions and/or composed operations into larger operations that will be executed one after another, in sequential order.
  * parallel() - Combines task functions and/or composed operations into larger operations that will be executed simultaneously.
@@ -50,4 +58,4 @@ exports.convertsasstocss = convertsasstocss;
  **/
 
 
-exports.default = series(compressimg);  // Defined a default tasks for executing one after another by using the function "series"
+exports.default = series(watchsass, compressimg);  // Defined a default tasks for executing one after another by using the function "series"

@@ -9,6 +9,7 @@ const imagemin = require('gulp-imagemin');
 const cleancss = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
+const browsersync = require('browser-sync').create();
 
 /*** Source and destination folders ***/
 const srcImg = 'src/img/**/*';  // ** (wildcard) means include all file in current folders and its subfolders
@@ -37,7 +38,8 @@ function compresscss() {
 function convertsasstocss() {
   return src(srcScss)
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest(destCss));
+    .pipe(dest(destCss))
+    .pipe(browsersync.stream());
 }
 
 function watchsass() {
@@ -47,15 +49,28 @@ function watchsass() {
   });
 }
 
+
+/**
+ *  Purpose: This function for reloading the webpage without manualy refresh the browser
+ **/
+function livereload() {
+  browsersync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+}
+
 exports.compressimg = compressimg;  // The name of the tasks runner and export it
 exports.compresscss = compresscss;
 exports.convertsasstocss = convertsasstocss;
 exports.watchsass = watchsass;
+exports.livereload = livereload;
 
 /* series() - Combines task functions and/or composed operations into larger operations that will be executed one after another, in sequential order.
  * parallel() - Combines task functions and/or composed operations into larger operations that will be executed simultaneously.
  *
  **/
 
-
+exports.watch = parallel(watchsass, livereload);
 exports.default = series(watchsass, compressimg);  // Defined a default tasks for executing one after another by using the function "series"

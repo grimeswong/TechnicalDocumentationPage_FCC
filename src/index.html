@@ -4,29 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+
   <title>Technical Documentation Page</title>
 </head>
 <body>
   <!-- User Story #15: My Technical Documentation page should use at least one media query. -->
   <!-- User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
-  <nav id="navbar">
-    <header>React Main Concepts</header>
-    <a href="#section_description1" class="nav-link">Section 1</a>
-    <a href="#section_description2" class="nav-link">Section 2</a>
-    <a href="#section_description3" class="nav-link">Section 3</a>
-    <a href="#section_description4" class="nav-link">Section 4</a>
-    <a href="#section_description5" class="nav-link">Section 5</a>
-  </nav>
-  <main id="main-doc">
-    <header>Main Doucmentation Section</header>
-    <!-- Each .main-section should contain at least 10 p elements, 5 code elements and 5 li items total -->
-    <section class="main-section" id="section_description1">Section 1</section>
-    <section class="main-section" id="section_description2">Section 2</section>
-    <section class="main-section" id="section_description3">Section 3</section>
-    <section class="main-section" id="section_description4">Section 4</section>
-    <section class="main-section" id="section_description5">Section 5</section>
-  </main>
-
+  <div class="container">
+    <nav class="col-lg-4" id="navbar">
+      <header>React Main Concepts</header>
+      <a href="#section_description1" class="nav-link">Section 1</a>
+      <a href="#section_description2" class="nav-link">Section 2</a>
+      <a href="#section_description3" class="nav-link">Section 3</a>
+      <a href="#section_description4" class="nav-link">Section 4</a>
+      <a href="#section_description5" class="nav-link">Section 5</a>
+    </nav>
+    <main class="col-lg-8" id="main-doc">
+      <header>Main Doucmentation Section</header>
+      <!-- Each .main-section should contain at least 10 p elements, 5 code elements and 5 li items total -->
+      <section class="main-section" id="section_description1">Section 1</section>
+      <section class="main-section" id="section_description2">Section 2</section>
+      <section class="main-section" id="section_description3">Section 3</section>
+      <section class="main-section" id="section_description4">Section 4</section>
+      <section class="main-section" id="section_description5">Section 5</section>
+    </main>
+  </div>
 </body>
 </html>

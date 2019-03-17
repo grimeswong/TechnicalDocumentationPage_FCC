@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One|Lora|Lora:bold|Roboto|Roboto:bold|Lato">
   <title>Technical Documentation Page</title>
 </head>
+
 <body>
   <!-- User Story #15: My Technical Documentation page should use at least one media query. -->
   <!-- User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
@@ -29,18 +31,13 @@
           <h1 class="main-section-title">Hello World</h1>
           <p class="main-section-description">The smallest React example looks like this:</p>
           <article class="section-container">
-            <code class="code">
-              ReactDOM
-              <span class="keyword">.render(</span>
-              <span class="symbol"><</span><span class="html-tag">h1</span><span class="symbol">></span>
-              <span class="text">Hello, world!</span>
-              <span class="symbol"><&#47;</span><span class="html-tag">h1</span><span class="symbol">></span>
-              <span class="text">document</span>
-              <span class="symbol">.</span><span class="funciton">getElementById</span><span class="symbol">('</span>
-              <span class="text">root</span>
-              <span class="symbol">')</span>
-              <span class="symbol">);</span>
-            </code>
+            <pre>
+              <code class="code">
+  ReactDOM<span class="keyword">.render(</span>
+    <span class="symbol"><</span><span class="html-tag">h1</span><span class="symbol">></span><span class="text">Hello, world!</span><span class="symbol"><&#47;</span><span class="html-tag">h1</span><span class="symbol">></span>
+    <span class="text">document</span><span class="symbol">.</span><span class="funciton">getElementById</span><span class="symbol">('</span><span class="text">root</span><span class="symbol">')</span>
+  <span class="symbol">);</span></code>
+            </pre>
             <p class="section-code-description">
               It displays a heading saying “Hello, world!” on the page.
             </p>
@@ -59,4 +56,5 @@
     </div>
   </div>
 </body>
+
 </html>

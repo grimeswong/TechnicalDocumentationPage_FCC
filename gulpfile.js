@@ -40,6 +40,7 @@ function compresscss() {
 function convertsasstocss() {
   return src(srcScss)
     .pipe(sass().on('error', sass.logError))
+    .pipe(compresscss())
     .pipe(dest(destCss))
     .pipe(browsersync.stream());
 }

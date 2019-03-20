@@ -1,6 +1,6 @@
 @import "bootstrap";  // import bootstrap scss file from local storage
 
-* {
+body {
   margin: 0;
   padding: 0;
 }
@@ -10,6 +10,10 @@ body {
   color: rgb(0,0,0);
 }
 
+p {
+  padding: 5px 0px;
+}
+
 pre {
   padding: 10px;
   color: rgb(255, 255, 255);
@@ -17,7 +21,12 @@ pre {
   border-radius: 10px;
 }
 
+.section-container {
+  margin: 20px 0;
+}
+
 .main-section-title {
+  padding: 15px 0px;
   font-size: 3.5em;
   font-weight: bold;
   font-family: Roboto, sans-serif;
@@ -27,5 +36,5 @@ pre {
   font-size: 1.5em;
   font-weight: 300;
   font-family: Lato, sans-serif;
-  color: rgb(148, 148, 148);
+  color: rgb(97, 218, 251);
 }

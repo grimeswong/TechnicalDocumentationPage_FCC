@@ -7,6 +7,7 @@
 const { src, dest, watch, parallel, series} = require('gulp');  // plugin for task runner
 const imagemin = require('gulp-imagemin');  // plugin for minify images
 const cleancss = require('gulp-clean-css'); // plugin for minify css
+const htmlmin = require('gulp-htmlmin'); // plugin for minify HTML
 const autoprefixer = require('gulp-autoprefixer');  // plugin for prefix css
 const sass = require('gulp-sass');  // plugin for convert sass/scss to css
 const browsersync = require('browser-sync').create(); // plugin for live css reload & browser syncing
@@ -45,6 +46,14 @@ function convertsasstocss() {
     .pipe(browsersync.stream());
 }
 
+function compresshtml() {
+  return src(srcHtml)
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(dest(destHtml));
+}
+
 function watchsass() {
   watch([srcScss], convertsasstocss)
   .on('change', (path, stats) => {
@@ -54,8 +63,9 @@ function watchsass() {
 
 
 function htmlchange() {
-  return src(srcHtml)
-    .pipe(dest(destHtml))
+  // return src(srcHtml)
+    compresshtml()
+    // .pipe(dest(destHtml))
     .pipe(browsersync.stream());
 }
 
@@ -84,6 +94,7 @@ function livereload() {
 
 exports.compressimg = compressimg;  // The name of the tasks runner and export it
 exports.compresscss = compresscss;
+exports.compresshtml = compresshtml;
 exports.convertsasstocss = convertsasstocss;
 exports.watchsass = watchsass;
 exports.watchhtml = watchhtml;

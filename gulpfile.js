@@ -51,35 +51,20 @@ function compresshtml() {
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(dest(destHtml));
+    .pipe(dest(destHtml))
+    .pipe(browsersync.stream());
 }
 
-function watchsass() {
+function watchchange() {
   watch([srcScss], convertsasstocss)
   .on('change', (path, stats) => {
     console.log(`Sass files in ${path} are converting to css file ...`);
   });
-}
-
-
-function htmlchange() {
-  // return src(srcHtml)
-    compresshtml()
-    // .pipe(dest(destHtml))
-    .pipe(browsersync.stream());
-}
-
-/**
-  * This function is for watch the change of html files
-  **/
-function watchhtml() {
-  watch([srcHtml], htmlchange)
+  watch([srcHtml], compresshtml)
   .on('change', (path, stats) => {
-    console.log(`HTML files in ${path} are copying to public folder ...`);
-    browsersync.reload();
+    console.log(`HTML files in ${path} are minifying ...`);
   });
 }
-
 
 /**
  *  Purpose: This function for reloading the webpage without manualy refresh the browser
@@ -96,8 +81,7 @@ exports.compressimg = compressimg;  // The name of the tasks runner and export i
 exports.compresscss = compresscss;
 exports.compresshtml = compresshtml;
 exports.convertsasstocss = convertsasstocss;
-exports.watchsass = watchsass;
-exports.watchhtml = watchhtml;
+exports.watchchange = watchchange;
 exports.livereload = livereload;
 
 /* series() - Combines task functions and/or composed operations into larger operations that will be executed one after another, in sequential order.
@@ -105,5 +89,5 @@ exports.livereload = livereload;
  *
  **/
 
-exports.watch = parallel(watchsass, watchhtml, livereload);
-exports.default = series(watchsass, compressimg);  // Defined a default tasks for executing one after another by using the function "series"
+exports.watch = parallel(watchchange, livereload);  // A watch task for tracking the change of html and css files
+exports.default = series(watchchange, compressimg);  // Defined a default tasks for executing one after another by using the function "series"

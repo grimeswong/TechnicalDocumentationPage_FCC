@@ -11,6 +11,7 @@ const htmlmin = require('gulp-htmlmin'); // plugin for minify HTML
 const autoprefixer = require('gulp-autoprefixer');  // plugin for prefix css
 const sass = require('gulp-sass');  // plugin for convert sass/scss to css
 const browsersync = require('browser-sync').create(); // plugin for live css reload & browser syncing
+const rename = require('gulp-rename');
 
 /*** Source and destination folders ***/
 const srcImg = 'src/img/**/*';  // ** (wildcard) means include all file in current folders and its subfolders
@@ -41,6 +42,8 @@ function compresscss() {
 function convertsasstocss() {
   return src(srcScss)
     .pipe(sass().on('error', sass.logError))
+    // .pipe(dest(destCss)) // if want a normal style file for reference. uncomment this line
+    .pipe(rename({suffix: ".min"}))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false

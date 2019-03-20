@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One|Lora|Lora:bold|Roboto|Roboto:bold|Lato">
   <title>Technical Documentation Page</title>
 </head>
@@ -33,10 +33,11 @@
           <article class="section-container">
             <pre>
               <code class="code">
-                ReactDOM<span class="keyword">.render(</span>
-                <span class="symbol">"<"</span><span class="html-tag">h1</span><span class="symbol">></span><span class="text">Hello, world!</span><span class="symbol"><&#47;</span><span class="html-tag">h1</span><span class="symbol">></span>
-                <span class="text">document</span><span class="symbol">.</span><span class="funciton">getElementById</span><span class="symbol">('</span><span class="text">root</span><span class="symbol">')</span>
-                <span class="symbol">);</span></code>
+                ReactDOM.render(
+                &lt;h1&gt;Hello, world!&lt;/h1&gt;
+                document.getElementById('root')
+                );
+              </code>
             </pre>
             <p class="section-code-description">
               It displays a heading saying “Hello, world!” on the page.

@@ -30,8 +30,7 @@ body {
 }
 
 p {
-  margin-bottom: 0;  //reset the browser setting
-  padding: 5px 0px;
+  padding: 5px 0px 10px 0px;
 }
 
 pre {
@@ -39,10 +38,6 @@ pre {
   color: $code-text-color;
   background-color: $code-background-color;
   border-radius: 10px;
-}
-
-article {
-  margin: 10px auto;
 }
 
 main {
@@ -65,7 +60,7 @@ main {
 }
 
 .section-container {
-  margin: 20px 0;
+  margin: 5rem 0;
 }
 
 .section-box-container {

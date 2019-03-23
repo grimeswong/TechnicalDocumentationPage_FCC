@@ -1,5 +1,5 @@
-@import "css-reset";  // import css-reset scss file for reset the browser default settings
 @import "bootstrap";  // import bootstrap scss file from local storage
+@import "css-reset";  // import css-reset scss file for reset the browser default settings
 
 
 
@@ -30,7 +30,8 @@ body {
 }
 
 p {
-  padding: 5px 0px 10px 0px;
+  margin-bottom: 0;  //reset the browser or bootstrap setting
+  padding: 15px 0px 15px 0px;
 }
 
 pre {

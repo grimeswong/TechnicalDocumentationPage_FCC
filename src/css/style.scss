@@ -14,6 +14,14 @@ $note-title-color: rgb(97, 218, 248);
 $note-title-background-color: rgb(0, 0, 0);
 $note-background-color: rgb(247, 239, 164);
 
+$code-keyword-color: rgb(54, 34, 218);
+$code-function-color: rgb(121, 182, 242);
+$code-symbol-color: rgb(11, 96, 0);
+$code-variable-color: rgb(241, 225, 17);
+$code-htmltag-color: rgb(255, 94, 94);
+$code-text-color: rgb(255, 255, 255);
+$code-comment-color: rgb(128, 126, 126);
+
 
 
 body {
@@ -79,5 +87,29 @@ main {
 
   & .section-box-content {
     padding: 20px 20px;
+  }
+}
+
+/*** code sections ***/
+.code {
+  color: $code-text-color;
+
+  .code-keyword {
+    color: $code-keyword-color;
+  }
+  .code-function {
+    color: $code-function-color;
+  }
+  .code-symbol {
+    color: $code-symbol-color;
+  }
+  .code-variable {
+    color: $code-variable-color;
+  }
+  .code-htmltag {
+    color: $code-htmltag-color;
+  }
+  .code-comment {
+    color: $code-comment-color;
   }
 }

@@ -1,6 +1,16 @@
 @import "bootstrap";  // import bootstrap scss file from local storage
 
-body {
+$section-title-color: rgb(30, 158, 251);
+$section-text-color: rgb(0,0,0);
+$code-text-color: rgb(255, 255, 255);
+$code-background-color: rgba(0, 0, 0, 0.9);
+$note-title-color: rgb(97, 218, 248);
+$note-title-background-color: rgb(0, 0, 0);
+$note-background-color: rgb(247, 239, 164);
+
+
+
+html {
   margin: 0;
   padding: 0;
 }
@@ -11,14 +21,19 @@ body {
 }
 
 p {
+  margin-bottom: 0;  //reset the browser setting
   padding: 5px 0px;
 }
 
 pre {
   padding: 10px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.9);
+  color: $code-text-color;
+  background-color: $code-background-color;
   border-radius: 10px;
+}
+
+article {
+  margin: 10px auto;
 }
 
 .section-container {
@@ -36,5 +51,27 @@ pre {
   font-size: 1.5em;
   font-weight: 300;
   font-family: Lato, sans-serif;
-  color: rgb(97, 218, 251);
+  color: $section-title-color;
+}
+
+.section-box-container {
+  margin: 30px 0;
+  color: $section-text-color;
+  background-color: $note-background-color;
+  border-radius: 10px;
+
+  & .section-box-titlebar {
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: rgb(97, 218, 248);
+    background-color: rgb(0, 0, 0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  & .section-box-content {
+    padding: 20px 20px;
+  }
 }

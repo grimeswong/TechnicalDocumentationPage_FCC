@@ -6,6 +6,9 @@
 /**
   * Colours
   */
+$logo-title-color: rgb(97, 218, 248);
+$logo-background-color: rgb(0, 0, 0);
+
 $section-title-color: rgb(30, 158, 251);
 $section-text-color: rgb(0,0,0);
 $code-text-color: rgb(255, 255, 255);
@@ -46,6 +49,30 @@ main {
 }
 
 
+/**
+  *  Nav Bar
+  */
+
+.logo-container {
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $logo-background-color;
+
+  img {
+    max-height: 50px;
+  }
+  header {
+    padding: 0 5px;
+    font-size: 1rem;
+    color: $logo-title-color;
+  }
+}
+
+/**
+  *  Main Pages
+  */
 .main-section header {
   padding: 15px 0px;
   font-size: 3.5em;

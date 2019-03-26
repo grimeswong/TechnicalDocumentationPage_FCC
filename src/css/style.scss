@@ -48,10 +48,20 @@ main {
   margin: 30px 0px;
 }
 
+.row {
+  width: 80%;
+  margin: auto;
+}
 
 /**
   *  Nav Bar
   */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  width: 20%;
+}
 
 .logo-container {
   padding: 20px 10px;
@@ -68,11 +78,21 @@ main {
     font-size: 1rem;
     color: $logo-title-color;
   }
+
+  .nav-links {
+    margin: 15px 10px;
+    padding: 10px;
+  }
 }
 
 /**
   *  Main Pages
   */
+#main-doc {
+  position: absolute;
+  left: 30%;
+}
+
 .main-section header {
   padding: 15px 0px;
   font-size: 3.5em;

@@ -59,7 +59,7 @@ main {
 #navbar {
   position: fixed;
   top: 0;
-  left: 10%;
+  left: 15%;
   width: 20%;
 }
 
@@ -90,7 +90,8 @@ main {
   */
 #main-doc {
   position: absolute;
-  left: 30%;
+  left: 35%;
+  max-width: 50%;
 }
 
 .main-section header {

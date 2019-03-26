@@ -7,7 +7,9 @@
   * Colours
   */
 $logo-title-color: rgb(97, 218, 248);
-$logo-background-color: rgb(0, 0, 0);
+$logo-background-color: rgba(0, 0, 0, 0.9);
+$nav-menu-color: rgb(30, 158, 251);
+$nav-background-color: rgb(255, 255, 255);
 
 $section-title-color: rgb(30, 158, 251);
 $section-text-color: rgb(0,0,0);
@@ -61,6 +63,24 @@ main {
   top: 0;
   left: 15%;
   width: 20%;
+
+  .navbar-title {
+    margin: 20px 0px;
+  }
+
+  ul {
+    margin: 40px 0;
+    background-color: $nav-background-color;
+    list-style-type: none;
+  }
+
+  li {
+    margin: 20px 0px;
+  }
+
+  a {
+    color: $nav-menu-color;
+  }
 }
 
 .logo-container {

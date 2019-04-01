@@ -83,10 +83,71 @@
               Keep scrolling down, and you’ll find the link to the next chapter of this guide right before the website footer.
             </p>
           </article>
-
         </section>
 
-        <section class="main-section" id="section_description2">Section 2</section>
+        <section class="main-section" id="section_intro-JSX">
+          <article class="section-container">
+            <header>Introducing JSX</header>
+            <p class="main-section-description">Consider this variable declaration:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const</span> element <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, world!<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;;</span>
+              </code>
+            </pre>
+            <p class="section-content">This funny tag syntax is neither a string nor HTML.</p>
+            <p class="section-content">It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
+            <p class="section-content">JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.</p>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">Why JSX?</h3>
+            <p class="section-content">React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.</p>
+            <p class="section-content">Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called “components” that contain both. We will come back to components in a further section, but if you’re not yet comfortable putting markup in JS, this talk might convince you otherwise.</p>
+            <p class="section-content">React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.</p>
+            <p class="section-content">With that out of the way, let’s get started!</p>
+          </article>
+          <article class="section-containter">
+            <h3 class="section-title">Embedding Expressions in JSX</h3>
+            <p class="section-content">In the example below, we declare a variable called name and then use it inside JSX by wrapping it in curly braces:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const</span> name <span class="code-symbol">= '</span>Josh Perez<span class="code-symbol">'</span>
+  <span class="code-keyword">const</span> element <span class="code-symbol">= &lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello,<span class="code-symbol">{</span>name<span class="code-symbol">}&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+
+  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+    <span class="code-variable">element</span><span class="code-symbol">,</span>
+    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">You can put any valid JavaScript expression inside the curly braces in JSX. For example, 2 + 2, user.firstName, or formatName(user) are all valid JavaScript expressions.</p>
+            <p class="section-content">In the example below, we embed the result of calling a JavaScript function, formatName(user), into an &lt;h1&gt; element.</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">function</span> <span class="code-variable">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">) {</span>
+    <span class="code-keyword">return</span> <span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function">firstName</span> <span class="code-symbol"> + ' ' + </span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function">lastName</span><span class="code-symbol">;</span>
+  <span class="code-symbol">}</span>
+
+  <span class="code-keyword">const </span>user <span class="code-symbol">= {</span>
+    <span class="code-variable">firstName</span><span class="code-symbol">: '</span>Harper<span class="code-symbol">',</span>
+    <span class="code-variable">lastName</span><span class="code-symbol">: '</span>Perez<span class="code-symbol">'</span>
+  <span class="code-symbol">};</span>
+
+  <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+      Hello, <span class="code-symbol">{</span><span class="code-function">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">)}!</span>
+    <span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+  <span class="code-symbol">);</span>
+
+  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+    <span class="code-variable">element</span><span class="code-symbol">,</span>
+    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">We split JSX over multiple lines for readability. While it isn’t required, when doing this, we also recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion.</p>
+          </article>
+        </section>
+
         <section class="main-section" id="section_description3">Section 3</section>
         <section class="main-section" id="section_description4">Section 4</section>
         <section class="main-section" id="section_description5">Section 5</section>

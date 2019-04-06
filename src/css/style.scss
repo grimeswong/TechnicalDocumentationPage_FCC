@@ -1,11 +1,16 @@
-@import "css-reset";  // import css-reset scss file for reset the browser default settings
 @import "bootstrap";  // import bootstrap scss file from local storage
+@import "css-reset";  // import css-reset scss file for reset the browser default settings
 
 
 
 /**
   * Colours
   */
+$logo-title-color: rgb(97, 218, 248);
+$logo-background-color: rgba(0, 0, 0, 0.9);
+$nav-menu-color: rgb(30, 158, 251);
+$nav-background-color: rgb(255, 255, 255);
+
 $section-title-color: rgb(30, 158, 251);
 $section-text-color: rgb(0,0,0);
 $code-text-color: rgb(255, 255, 255);
@@ -14,7 +19,7 @@ $note-title-color: rgb(97, 218, 248);
 $note-title-background-color: rgb(0, 0, 0);
 $note-background-color: rgb(247, 239, 164);
 
-$code-keyword-color: rgb(54, 34, 218);
+$code-keyword-color: rgb(101, 84, 245);
 $code-function-color: rgb(121, 182, 242);
 $code-symbol-color: rgb(11, 96, 0);
 $code-variable-color: rgb(241, 225, 17);
@@ -30,10 +35,12 @@ body {
 }
 
 p {
-  padding: 5px 0px 10px 0px;
+  margin-bottom: 0;  //reset the browser or bootstrap setting
+  padding: 15px 0px 15px 0px;
 }
 
 pre {
+  margin: 10px 0 30px 0;
   padding: 10px;
   color: $code-text-color;
   background-color: $code-background-color;
@@ -44,6 +51,69 @@ main {
   margin: 30px 0px;
 }
 
+.row {
+  width: 80%;
+  margin: auto;
+}
+
+/**
+  *  Nav Bar
+  */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 15%;
+  width: 20%;
+
+  .navbar-title {
+    margin: 20px 0px;
+  }
+
+  ul {
+    margin: 40px 0;
+    background-color: $nav-background-color;
+    list-style-type: none;
+  }
+
+  li {
+    margin: 20px 0px;
+  }
+
+  a {
+    color: $nav-menu-color;
+  }
+}
+
+.logo-container {
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $logo-background-color;
+
+  img {
+    max-height: 50px;
+  }
+  header {
+    padding: 0 5px;
+    font-size: 1rem;
+    color: $logo-title-color;
+  }
+
+  .nav-links {
+    margin: 15px 10px;
+    padding: 10px;
+  }
+}
+
+/**
+  *  Main Pages
+  */
+#main-doc {
+  position: absolute;
+  left: 35%;
+  max-width: 50%;
+}
 
 .main-section header {
   padding: 15px 0px;
@@ -61,6 +131,10 @@ main {
 
 .section-container {
   margin: 5rem 0;
+
+  .section-title {
+    padding-bottom: 10px;
+  }
 }
 
 .section-box-container {

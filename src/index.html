@@ -13,17 +13,23 @@
 <body>
   <!-- User Story #15: My Technical Documentation page should use at least one media query. -->
   <!-- User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <nav class="col-lg-4" id="navbar">
-        <header>React Main Concepts</header>
-        <a href="#section_description1" class="nav-link">Section 1</a>
-        <a href="#section_description2" class="nav-link">Section 2</a>
-        <a href="#section_description3" class="nav-link">Section 3</a>
-        <a href="#section_description4" class="nav-link">Section 4</a>
-        <a href="#section_description5" class="nav-link">Section 5</a>
+      <nav class="col-md-4" id="navbar">
+        <div class="logo-container">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="React_Logo">
+          <header>React Main Concepts</header>
+        </div>
+        <h4 class="navbar-title">Main Concepts</h4>
+        <ul class="nav-links">
+          <li><a href="#section_hello-world" class="nav-link">Hello World</a></li>
+          <li><a href="#section_intro-JSX" class="nav-link">Introducing JSX</a></li>
+          <li><a href="#section_rendering-elements" class="nav-link">Rendering Elements</a></li>
+          <li><a href="#section_components-and-props" class="nav-link">Components and Props</a></li>
+          <li><a href="#section_state-and-lifecycle" class="nav-link">State and Lifecycle</a></li>
+        </ul>
       </nav>
-      <main class="col-lg-8" id="main-doc">
+      <main class="col-md-8" id="main-doc">
         <!-- Each .main-section should contain at least 10 p elements, 5 code elements and 5 li items total -->
 
         <section class="main-section" id="section_hello-world">
@@ -77,10 +83,186 @@
               Keep scrolling down, and you’ll find the link to the next chapter of this guide right before the website footer.
             </p>
           </article>
+        </section>
+
+        <section class="main-section" id="section_intro-JSX">
+          <article class="section-container">
+            <header>Introducing JSX</header>
+            <p class="main-section-description">Consider this variable declaration:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const</span> element <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, world!<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;;</span>
+              </code>
+            </pre>
+            <p class="section-content">This funny tag syntax is neither a string nor HTML.</p>
+            <p class="section-content">It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
+            <p class="section-content">JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.</p>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">Why JSX?</h3>
+            <p class="section-content">React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.</p>
+            <p class="section-content">Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called “components” that contain both. We will come back to components in a further section, but if you’re not yet comfortable putting markup in JS, this talk might convince you otherwise.</p>
+            <p class="section-content">React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.</p>
+            <p class="section-content">With that out of the way, let’s get started!</p>
+          </article>
+          <article class="section-containter">
+            <h3 class="section-title">Embedding Expressions in JSX</h3>
+            <p class="section-content">In the example below, we declare a variable called name and then use it inside JSX by wrapping it in curly braces:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const</span> name <span class="code-symbol">= '</span>Josh Perez<span class="code-symbol">'</span>
+  <span class="code-keyword">const</span> element <span class="code-symbol">= &lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello,<span class="code-symbol">{</span>name<span class="code-symbol">}&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+
+  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+    <span class="code-variable">element</span><span class="code-symbol">,</span>
+    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">You can put any valid JavaScript expression inside the curly braces in JSX. For example, 2 + 2, user.firstName, or formatName(user) are all valid JavaScript expressions.</p>
+            <p class="section-content">In the example below, we embed the result of calling a JavaScript function, formatName(user), into an &lt;h1&gt; element.</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">function</span> <span class="code-variable">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">) {</span>
+    <span class="code-keyword">return</span> <span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function">firstName</span> <span class="code-symbol"> + ' ' + </span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function">lastName</span><span class="code-symbol">;</span>
+  <span class="code-symbol">}</span>
+
+  <span class="code-keyword">const </span>user <span class="code-symbol">= {</span>
+    <span class="code-variable">firstName</span><span class="code-symbol">: '</span>Harper<span class="code-symbol">',</span>
+    <span class="code-variable">lastName</span><span class="code-symbol">: '</span>Perez<span class="code-symbol">'</span>
+  <span class="code-symbol">};</span>
+
+  <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+      Hello, <span class="code-symbol">{</span><span class="code-function">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">)}!</span>
+    <span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+  <span class="code-symbol">);</span>
+
+  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+    <span class="code-variable">element</span><span class="code-symbol">,</span>
+    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">We split JSX over multiple lines for readability. While it isn’t required, when doing this, we also recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion.</p>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">JSX is an Expression Too</h3>
+            <p class="section-content">After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.</p>
+            <p class="section-content">This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">function </span><span class="code-variable">getGreeting</span><span class="code-symbol">(</span><userspan class="code-symbol">) {</userspan>
+    <span class="code-keyword">if </span><span class="code-symbol">(</span>user<span class="code-symbol">) {</span>
+      <span class="code-keyword">return</span> <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, <span class="code-symbol">{</span><span class="code-function">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">)}!</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+    <span class="code-symbol">}</span>
+  <span class="code-keyword">return</span> <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, Stranger.<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+  <span class="code-symbol">}</span>
+              </code>
+            </pre>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">Specifying Attributes with JSX</h3>
+            <p class="section-content">You may use quotes to specify string literals as attributes:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const </span>element <span class="code-symbol">= &lt;</span><span class="htmltag">div</span><span class="code-symbol">&gt; </span><span class="code-function">tabIndex</span><span class="code-symbol">="0"&gt;</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>;
+              </code>
+            </pre>
+            <p class="section-content">You may also use curly braces to embed a JavaScript expression in an attribute:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const </span>element <span class="code-symbol">= &lt;</span><span class="code-htmltag">img</span> <span class="code-function">src</span><span class="code-symbol">={</span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function"></span>avatarUrl<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">img</span><span class="code-symbol">&gt;</span>;
+              </code>
+            </pre>
+            <p class="section-content">Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute. You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.</p>
+            <div class="section-box-container">
+              <div class="section-box-titlebar">
+                <div class="section-box-title">Warning:</div>
+              </div>
+              <div class="section-box-content">
+                Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
+                <p>For example, class becomes className in JSX, and tabindex becomes tabIndex.</p>
+              </div>
+            </div>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">Specifying Children with JSX</h3>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const </span>element <span class="code-symbol">= &lt;</span><span class="code-htmltag">img</span> <span class="code-function">src</span><span class="code-symbol">={</span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function"></span>avatarUrl<span class="code-symbol">}</span><span class="code-symbol"><span class="code-symbol"> /&gt;;</span>
+              </code>
+            </pre>
+            <p class="section-content">JSX tags may contain children:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello!<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>Good to see you here.<span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+    <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">JSX Prevents Injection Attacks</h3>
+            <p class="section-content">It is safe to embed user input in JSX:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const </span>title <span class="code-symbol">= </span><span class="code-variable">response</span><span class="code-symbol">.</span><span class="code-function">potentiallyMaliciousInput</span><span class="code-symbol">;</span>
+  <span class="code-comment">// This is safe:</span>
+  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;{</span>title<span class="code-symbol">}&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+              </code>
+            </pre>
+            <p class="section-content">By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent XSS (cross-site-scripting) attacks.</p>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">JSX Represents Objects</h3>
+            <p class="section-content">Babel compiles JSX down to React.createElement() calls.</p>
+            <p class="section-content">These two examples are identical:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">h1 </span><span class="code-variable">className</span><span class="code-symbol">="</span>greeting<span class="code-symbol">"&gt;</span>
+      Hello, world!
+    <span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">createElement</span><span class="code-symbotl">(</span>
+    <span class="code-symbol">'</span><span class="code-htmltag">h1</span><span class="code-symbol">',</span>
+    <span class="code-symbol">{</span><span class="code-variable">className</span><span class="code-symbol">: '</span>greeting<span class="code-symbol">'},</span>
+    <span class="code-symbol">'</span>Hello, world!<span class="code-symbol">'</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object like this:</p>
+            <pre>
+              <code class="code">
+  <span class="code-comment">// Note: this structure is simplified</span>
+  <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+    <span class="code-variable">type</span><span class="code-symbol">: '</span><span class="code-htmltag">h1</span><span class="code-symbol">',</span>
+    <span class="code-variablw">props</span><span class="code-symbol">: {</span>
+      <span class="code-variable">className</span><span class="code-symbol">: '</span>greeting<span class="code-symbol">'</span>
+      <span class="code-variable">children</span><span class="code-symbol">: '</span>Hello, world!<span class="code-symbol">'</span>
+    <span class="code-symbol">}</span>
+  <span class="code-symbol">};</span>
+              </code>
+            </pre>
+            <p class="section-content">These objects are called “React elements”. You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.</p>
+            <p class="section-content">We will explore rendering React elements to the DOM in the next section.</p>
+            <div class="section-box-container">
+              <div class="section-box-titlebar">Tip</div>
+              <div class="section-box-content">We recommend using the “Babel” language definition for your editor of choice so that both ES6 and JSX code is properly highlighted. This website uses the Oceanic Next color scheme which is compatible with it.</div>
+            </div>
+          </article>
+
 
         </section>
 
-        <section class="main-section" id="section_description2">Section 2</section>
         <section class="main-section" id="section_description3">Section 3</section>
         <section class="main-section" id="section_description4">Section 4</section>
         <section class="main-section" id="section_description5">Section 5</section>

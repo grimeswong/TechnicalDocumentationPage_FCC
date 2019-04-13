@@ -259,11 +259,79 @@
               <div class="section-box-content">We recommend using the “Babel” language definition for your editor of choice so that both ES6 and JSX code is properly highlighted. This website uses the Oceanic Next color scheme which is compatible with it.</div>
             </div>
           </article>
-
-
         </section>
 
-        <section class="main-section" id="section_description3">Section 3</section>
+        <section class="main-section" id="section_rendering-elements">
+          <article class="section-container">
+            <header>Rendering Elements</header>
+            <p class="main-section-description">Elements are the smallest building blocks of React apps.</p>
+            <p class="section-content">An element describes what you want to see on the screen:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+              </code>
+            </pre>
+            <p class="section-content">Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
+            <div class="section-box-container">
+              <div class="section-box-titlebar">
+                <div class="section-box-title">Note:</div>
+              </div>
+              <div class="section-box-content">One might confuse elements with a more widely known concept of “components”. We will introduce components in the next section. Elements are what components are “made of”, and we encourage you to read this section before jumping ahead.</div>
+            </div>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">Rendering an Element into the DOM</h3>
+            <p class="section-content">Let’s say there is a <div> somewhere in your HTML file:</p>
+            <pre>
+              <code class="code">
+  <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">id</span><span class="code-symbol">="</span>root<span class="code-symbol">"</span><span class="code-symbol">&gt;</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+              </code>
+            </pre>
+            <p class="section-content">We call this a “root” DOM node because everything inside it will be managed by React DOM.</p>
+            <p class="section-content">Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.</p>
+            <p class="section-contnet">To render a React element into a root DOM node, pass both to ReactDOM.render():</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span><span class="code-variable">element</span><span class="code-symbol">,</span><span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span><span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">It displays “Hello, world” on the page.</p>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">Updating the Rendered Element</h3>
+            <p class="section-content">React elements are immutable. Once you create an element, you can’t change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.</p>
+            <p class="section-content">With our knowledge so far, the only way to update the UI is to create a new element, and pass it to ReactDOM.render().</p>
+            <p class="section-content">Consider this ticking clock example:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">function </span><span class="code-function">tick</span><span class="code-symbol">() {</span>
+    <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">().</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+    <span class="code-symbol">);</span>
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span><span class="code-variable">element</span><span class="code-symbol">,</span><span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span><span class="code-symbol">);</span>
+  <span class="code-symbol">}</span>
+
+  <span class="code-function">setInterval</span><span class="code-symbol">(</span>ticks<span class="code-symbol">, </span>1000<span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">It calls ReactDOM.render() every second from a setInterval() callback.</p>
+            <div class="section-box-container">
+              <div class="section-box-titlebar">
+                <div class="section-box-title">Note:</div>
+              </div>
+              <div class="section-box-content">
+                <p>In practice, most React apps only call ReactDOM.render() once. In the next sections we will learn how such code gets encapsulated into stateful components.</p>
+                <p>We recommend that you don’t skip topics because they build on each other.</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+
         <section class="main-section" id="section_description4">Section 4</section>
         <section class="main-section" id="section_description5">Section 5</section>
       </main>

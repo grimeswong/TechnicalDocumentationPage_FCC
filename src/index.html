@@ -232,7 +232,7 @@
             </pre>
             <pre>
               <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">createElement</span><span class="code-symbotl">(</span>
+  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">createElement</span><span class="code-symbol">(</span>
     <span class="code-symbol">'</span><span class="code-htmltag">h1</span><span class="code-symbol">',</span>
     <span class="code-symbol">{</span><span class="code-variable">className</span><span class="code-symbol">: '</span>greeting<span class="code-symbol">'},</span>
     <span class="code-symbol">'</span>Hello, world!<span class="code-symbol">'</span>
@@ -617,7 +617,7 @@
             <pre>
               <code class="code">
   <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol"> /&gt;,</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
     <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
   <span class="code-symbol">);</span>
               </code>
@@ -625,7 +625,232 @@
             <p class="section-content">To implement this, we need to add “state” to the Clock component.</p>
             <p class="section-content">State is similar to props, but it is private and fully controlled by the component.</p>
           </article>
-          
+          <article class="section-container">
+            <h3 class="section-title">Converting a Function to a Class</h3>
+            <p class="section-content">You can convert a function component like Clock to a class in five steps:</p>
+            <ol>
+              <li>Create an ES6 class, with the same name, that extends React.Component.</li>
+              <li>Add a single empty method to it called render().</li>
+              <li>Move the body of the function into the render() method.</li>
+              <li>Replace props with this.props in the render() body.</li>
+              <li>Delete the remaining empty function declaration.</li>
+            </ol>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+    <span class="code-function">render</span><span class="code-symbol">() {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+  <span class="code-symbol">}</span>
+              </code>
+            </pre>
+            <p class="section-content">Clock is now defined as a class rather than a function.</p>
+            <p class="section-content">The render method will be called each time an update happens, but as long as we render <Clock /> into the same DOM node, only a single instance of the Clock class will be used. This lets us use additional features such as local state and lifecycle methods.</p>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">Adding Local State to a Class</h3>
+            <p class="section-content">We will move the date from props to state in three steps:</p>
+            <ol>
+              <li>Replace this.props.date with this.state.date in the render() method:</li>
+            </ol>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+    <span class="code-function">render</span><span class="code-symbol">() {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+  <span class="code-symbol">}</span>
+              </code>
+            </pre>
+            <ol start="2">
+              <li>Add a class constructor that assigns the initial this.state:</li>
+            </ol>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+    <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+      <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">render</span><span class="code-symbol">() {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+  <span class="code-symbol">}</span>
+              </code>
+            </pre>
+            <p class="section-content">Note how we pass props to the base constructor:</p>
+            <pre>
+              <code class="code">
+  <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+    <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+    <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+  <span class="code-symbol">}</span>
+              </code>
+            </pre>
+            <p class="section-content">Class components should always call the base constructor with props.</p>
+            <ol start="3">
+              <li>Remove the date prop from the &lt;Clock /&gt; element:</li>
+            </ol>
+            <pre>
+              <code class="code">
+  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
+    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">We will later add the timer code back to the component itself.</p>
+            <p class="section-content">The result looks like this:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+    <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+      <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">render</span><span class="code-symbol">() {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+  <span class="code-symbol">}</span>
+
+  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
+    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">Next, we’ll make the Clock set up its own timer and update itself every second.</p>
+          </article>
+          <article class="section-container">
+            <h3 class="section-title">Adding Lifecycle Methods to a Class</h3>
+            <p class="section-content">In applications with many components, it’s very important to free up resources taken by the components when they are destroyed.</p>
+            <p class="section-content">We want to set up a timer whenever the Clock is rendered to the DOM for the first time. This is called “mounting” in React.</p>
+            <p class="section-content">We also want to clear that timer whenever the DOM produced by the Clock is removed. This is called “unmounting” in React.</p>
+            <p class="section-content">We can declare special methods on the component class to run some code when a component mounts and unmounts:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+    <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+      <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">componentDidMount</span><span class="code-symbol">() {</span>
+
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">componentWillMount</span><span class="code-symbol">() {</span>
+
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">render</span><span class="code-symbol">() {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+  <span class="code-symbol">}</span>
+              </code>
+            </pre>
+            <p class="section-content">These methods are called “lifecycle methods”.</p>
+            <p class="section-content">The componentDidMount() method runs after the component output has been rendered to the DOM. This is a good place to set up a timer:</p>
+            <pre>
+              <code class="code">
+  <span class="code-function">componentDidMount</span><span class="code-symbol">() {</span>
+    <span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol"> = </span><span class="code-function">setInterval</span><span class="code-symbol">(</span>
+      <span class="code-symbol">() => </span><span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">tick</span><span class="code-symbol">(),</span>
+      1000
+    <span class="code-symbol">);</span>
+  <span class="code-symbol">}</span>
+              </code>
+            </pre>
+            <p class="section-content">Note how we save the timer ID right on this.</p>
+            <p class="section-content">While this.props is set up by React itself and this.state has a special meaning, you are free to add additional fields to the class manually if you need to store something that doesn’t participate in the data flow (like a timer ID).</p>
+            <p class="section-content">We will tear down the timer in the componentWillUnmount() lifecycle method:</p>
+            <pre>
+              <code class="code">
+  <span class="code-function">componentWillMount</span><span class="code-symbol">() {</span>
+    <span class="code-function">clearInterval</span><span class="code-symbol">(</span><span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol">);</span>
+  <span class="code-symbol">}</span>
+              </code>
+            </pre>
+            <p class="section-content">Finally, we will implement a method called tick() that the Clock component will run every second.</p>
+            <p class="section-content">It will use this.setState() to schedule updates to the component local state:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+    <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+      <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">componentDidMount</span><span class="code-symbol">() {</span>
+      <span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol"> = </span><span class="code-function">setInterval</span><span class="code-symbol">(</span>
+        <span class="code-symbol">() => </span><span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">tick</span><span class="code-symbol">(),</span>
+        1000
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">componentWillMount</span><span class="code-symbol">() {</span>
+      <span class="code-function">clearInterval</span><span class="code-symbol">(</span><span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">tick</span><span class="code-symbol">() {</span>
+      <span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">seState</span><span class="code-symbol">({</span>
+        <span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()</span>
+      <span class="code-symbol">});</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">render</span><span class="code-symbol">() {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+  <span class="code-symbol">}</span>
+
+  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
+    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+  <span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">Now the clock ticks every second.</p>
+            <p class="section-content">Let’s quickly recap what’s going on and the order in which the methods are called:</p>
+            <ol>
+              <li>When <Clock /> is passed to ReactDOM.render(), React calls the constructor of the Clock component. Since Clock needs to display the current time, it initializes this.state with an object including the current time. We will later update this state.</li>
+              <li>React then calls the Clock component’s render() method. This is how React learns what should be displayed on the screen. React then updates the DOM to match the Clock’s render output.</li>
+              <li>When the Clock output is inserted in the DOM, React calls the componentDidMount() lifecycle method. Inside it, the Clock component asks the browser to set up a timer to call the component’s tick() method once a second.</li>
+              <li>Every second the browser calls the tick() method. Inside it, the Clock component schedules a UI update by calling setState() with an object containing the current time. Thanks to the setState() call, React knows the state has changed, and calls the render() method again to learn what should be on the screen. This time, this.state.date in the render() method will be different, and so the render output will include the updated time. React updates the DOM accordingly.</li>
+              <li>If the Clock component is ever removed from the DOM, React calls the componentWillUnmount() lifecycle method so the timer is stopped.</li>
+            </ol>
+          </article>
         </section>
       </main>
     </div>

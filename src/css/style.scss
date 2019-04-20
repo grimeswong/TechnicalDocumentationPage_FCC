@@ -75,7 +75,10 @@ main {
   bottom: 0;
 
   .navbar-title {
-    margin: 20px 0px;
+    padding: 20px 0px;
+    text-align: center;
+    color: $logo-title-color;
+    background-color: $logo-background-color;
   }
 
   ul {
@@ -105,7 +108,7 @@ main {
   }
   header {
     padding: 0 5px;
-    font-size: 1rem;
+    font-size: 2rem;
     color: $logo-title-color;
   }
 

@@ -69,6 +69,10 @@ main {
   top: 0;
   left: 15%;
   width: 20%;
+  /*  for scrollable side bar */
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
 
   .navbar-title {
     margin: 20px 0px;

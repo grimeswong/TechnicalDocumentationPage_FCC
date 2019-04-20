@@ -312,7 +312,7 @@
         <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">().</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
       <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
     <span class="code-symbol">);</span>
-    `<span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span><span class="code-variable">element</span><span class="code-symbol">,</span><span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span><span class="code-symbol">);</span>`
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span><span class="code-variable">element</span><span class="code-symbol">,</span><span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span><span class="code-symbol">);</span>`
   <span class="code-symbol">}</span>
 
   <span class="code-function">setInterval</span><span class="code-symbol">(</span>ticks<span class="code-symbol">, </span>1000<span class="code-symbol">);</span>
@@ -567,9 +567,32 @@
           </article>
         </section>
 
+        <section class="main-section" id="section_state-and-lifecycle">
+          <header>State and Lifecycle</header>
+          <article class="section-container">
+            <p class="main-section-description">This page introduces the concept of state and lifecycle in a React component.</p>
+            <p class="section-content">Consider the ticking clock example from one of the previous sections. In Rendering Elements, we have only learned one way to update the UI. We call ReactDOM.render() to change the rendered output:</p>
+            <pre>
+              <code class="code">
+  <span class="code-keyword">function </span><span class="code-function">tick</span><span class="code-symbol">(</span><span class="code-symbol">) {</span>
+    <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">().</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-variable">element</span><span class="code-symbol">,</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
 
-
-        <section class="main-section" id="section_description5">Section 5</section>
+    <span class="code-function">setInterval</span><span class="code-symbol">(</span>ticks<span class="code-symbol">, </span>1000<span class="code-symbol">);</span>
+              </code>
+            </pre>
+            <p class="section-content">In this section, we will learn how to make the Clock component truly reusable and encapsulated. It will set up its own timer and update itself every second.</p>
+            <p class="section-content">We can start by encapsulating how the clock looks:</p>
+          </article>
+        </section>
       </main>
     </div>
   </div>

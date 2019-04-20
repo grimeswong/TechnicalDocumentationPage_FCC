@@ -1,860 +1,998 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One|Lora|Lora:bold|Roboto|Roboto:bold|Lato">
-  <title>Technical Documentation Page</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One|Lora|Lora:bold|Roboto|Roboto:bold|Lato">
+    <title>Technical Documentation Page</title>
+  </head>
 
-<body>
-  <!-- User Story #15: My Technical Documentation page should use at least one media query. -->
-  <!-- User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
-  <div class="container-fluid">
-    <div class="row">
-      <nav class="col-md-4" id="navbar">
-        <div class="logo-container">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="React_Logo">
-          <header>React Main Concepts</header>
-        </div>
-        <h4 class="navbar-title">Main Concepts</h4>
-        <ul class="nav-links">
-          <li><a href="#section_hello-world" class="nav-link">Hello World</a></li>
-          <li><a href="#section_intro-JSX" class="nav-link">Introducing JSX</a></li>
-          <li><a href="#section_rendering-elements" class="nav-link">Rendering Elements</a></li>
-          <li><a href="#section_components-and-props" class="nav-link">Components and Props</a></li>
-          <li><a href="#section_state-and-lifecycle" class="nav-link">State and Lifecycle</a></li>
-        </ul>
-      </nav>
-      <main class="col-md-8" id="main-doc">
-        <!-- Each .main-section should contain at least 10 p elements, 5 code elements and 5 li items total -->
+  <body>
+    <!-- User Story #15: My Technical Documentation page should use at least one media query. -->
+    <!-- User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-4" id="navbar">
+          <div class="logo-container">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="React_Logo">
+            <header>React Main Concepts</header>
+          </div>
+          <h4 class="navbar-title">Main Concepts</h4>
+          <ul class="nav-links">
+            <li><a href="#section_hello-world" class="nav-link">Hello World</a></li>
+            <li><a href="#section_intro-JSX" class="nav-link">Introducing JSX</a></li>
+            <li><a href="#section_rendering-elements" class="nav-link">Rendering Elements</a></li>
+            <li><a href="#section_components-and-props" class="nav-link">Components and Props</a></li>
+            <li><a href="#section_state-and-lifecycle" class="nav-link">State and Lifecycle</a></li>
+          </ul>
+        </nav>
+        <main class="col-md-8" id="main-doc">
+          <!-- Each .main-section should contain at least 10 p elements, 5 code elements and 5 li items total -->
 
-        <section class="main-section" id="section_hello-world">
-          <header>Hello World</header>
-          <article class="section-container">
-            <p class="main-section-description">The smallest React example looks like this:</p>
-            <pre>
-              <code class="code">
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, world!<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
-  <span class="code-symbol">);</span>
-  <span class="code-comment">//For Testing only</span>
-              </code>
-            </pre>
-            <p class="section-code-description">
-              It displays a heading saying “Hello, world!” on the page.
-            </p>
-            <p class="section-content">
-              Click the link above to open an online editor. Feel free to make some changes, and see how they affect the output. Most pages in this guide will have editable examples like this one.
-            </p>
-
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">How to Read This Guide</h3>
-            <p class="section-content">In this guide, we will examine the building blocks of React apps: elements and components. Once you master them, you can create complex apps from small reusable pieces.</p>
-            <div class="section-box-container">
-              <div class="section-box-titlebar">
-                <div class="section-box-title">Tip</div>
-              </div>
-              <p class="section-box-content">
-                This guide is designed for people who prefer <strong>learning concepts step by step</strong>. If you prefer to learn by doing, check out our practical tutorial. You might find this guide and the tutorial complementary to each other.
+          <section class="main-section" id="section_hello-world">
+            <header>Hello World</header>
+            <article class="section-container">
+              <p class="main-section-description">The smallest React example looks like this:</p>
+              <pre>
+                <code class="code">
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, world!<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+    <span class="code-symbol">);</span>
+    <span class="code-comment">//For Testing only</span>
+                </code>
+              </pre>
+              <p class="section-code-description">
+                It displays a heading saying “Hello, world!” on the page.
               </p>
-            </div>
-            <p class="section-content">This is the first chapter in a step-by-step guide about main React concepts. You can find a list of all its chapters in the navigation sidebar. If you’re reading this from a mobile device, you can access the navigation by pressing the button in the bottom right corner of your screen.</p>
-            <p class="section-content">Every chapter in this guide builds on the knowledge introduced in earlier chapters. <strong>You can learn most of React by reading the “Main Concepts” guide chapters in the order they appear in the sidebar.</strong> For example, “Introducing JSX” is the next chapter after this one.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Knowledge Level Assumptions</h3>
-            <p class="section-content">React is a JavaScript library, and so we’ll assume you have a basic understanding of the JavaScript language. <strong>If you don’t feel very confident, we recommend going through a JavaScript tutorial to check your knowledge level</strong> and enable you to follow along this guide without getting lost. It might take you between 30 minutes and an hour, but as a result you won’t have to feel like you’re learning both React and JavaScript at the same time.</p>
-            <div class="section-box-container">
-              <div class="section-box-titlebar">
-                <div class="section-box-title">Note</div>
+              <p class="section-content">
+                Click the link above to open an online editor. Feel free to make some changes, and see how they affect the output. Most pages in this guide will have editable examples like this one.
+              </p>
+
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">How to Read This Guide</h3>
+              <p class="section-content">In this guide, we will examine the building blocks of React apps: elements and components. Once you master them, you can create complex apps from small reusable pieces.</p>
+              <div class="section-box-container">
+                <div class="section-box-titlebar">
+                  <div class="section-box-title">Tip</div>
+                </div>
+                <p class="section-box-content">
+                  This guide is designed for people who prefer <strong>learning concepts step by step</strong>. If you prefer to learn by doing, check out our practical tutorial. You might find this guide and the tutorial complementary to each other.
+                </p>
               </div>
-              <div class="section-box-content">This guide occasionally uses some of the newer JavaScript syntax in the examples. If you haven’t worked with JavaScript in the last few years, these three points should get you most of the way.</div>
-            </div>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Let’s Get Started!</h3>
-            <p class="section-content">
-              Keep scrolling down, and you’ll find the link to the next chapter of this guide right before the website footer.
-            </p>
-          </article>
-        </section>
+              <p class="section-content">This is the first chapter in a step-by-step guide about main React concepts. You can find a list of all its chapters in the navigation sidebar. If you’re reading this from a mobile device, you can access the navigation by pressing the button in the bottom right corner of your screen.</p>
+              <p class="section-content">Every chapter in this guide builds on the knowledge introduced in earlier chapters. <strong>You can learn most of React by reading the “Main Concepts” guide chapters in the order they appear in the sidebar.</strong> For example, “Introducing JSX” is the next chapter after this one.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Knowledge Level Assumptions</h3>
+              <p class="section-content">React is a JavaScript library, and so we’ll assume you have a basic understanding of the JavaScript language. <strong>If you don’t feel very confident, we recommend going through a JavaScript tutorial to check your knowledge level</strong> and enable you to follow along this guide without getting lost. It might take you between 30 minutes and an hour, but as a result you won’t have to feel like you’re learning both React and JavaScript at the same time.</p>
+              <div class="section-box-container">
+                <div class="section-box-titlebar">
+                  <div class="section-box-title">Note</div>
+                </div>
+                <div class="section-box-content">This guide occasionally uses some of the newer JavaScript syntax in the examples. If you haven’t worked with JavaScript in the last few years, these three points should get you most of the way.</div>
+              </div>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Let’s Get Started!</h3>
+              <p class="section-content">
+                Keep scrolling down, and you’ll find the link to the next chapter of this guide right before the website footer.
+              </p>
+            </article>
+          </section>
 
-        <section class="main-section" id="section_intro-JSX">
-          <header>Introducing JSX</header>
-          <article class="section-container">
-            <p class="main-section-description">Consider this variable declaration:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const</span> element <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, world!<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;;</span>
-              </code>
-            </pre>
-            <p class="section-content">This funny tag syntax is neither a string nor HTML.</p>
-            <p class="section-content">It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
-            <p class="section-content">JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Why JSX?</h3>
-            <p class="section-content">React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.</p>
-            <p class="section-content">Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called “components” that contain both. We will come back to components in a further section, but if you’re not yet comfortable putting markup in JS, this talk might convince you otherwise.</p>
-            <p class="section-content">React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.</p>
-            <p class="section-content">With that out of the way, let’s get started!</p>
-          </article>
-          <article class="section-containter">
-            <h3 class="section-title">Embedding Expressions in JSX</h3>
-            <p class="section-content">In the example below, we declare a variable called name and then use it inside JSX by wrapping it in curly braces:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const</span> name <span class="code-symbol">= '</span>Josh Perez<span class="code-symbol">'</span>
-  <span class="code-keyword">const</span> element <span class="code-symbol">= &lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello,<span class="code-symbol">{</span>name<span class="code-symbol">}&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+          <section class="main-section" id="section_intro-JSX">
+            <header>Introducing JSX</header>
+            <article class="section-container">
+              <p class="main-section-description">Consider this variable declaration:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const</span> element <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, world!<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;;</span>
+                </code>
+              </pre>
+              <p class="section-content">This funny tag syntax is neither a string nor HTML.</p>
+              <p class="section-content">It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
+              <p class="section-content">JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Why JSX?</h3>
+              <p class="section-content">React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.</p>
+              <p class="section-content">Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called “components” that contain both. We will come back to components in a further section, but if you’re not yet comfortable putting markup in JS, this talk might convince you otherwise.</p>
+              <p class="section-content">React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.</p>
+              <p class="section-content">With that out of the way, let’s get started!</p>
+            </article>
+            <article class="section-containter">
+              <h3 class="section-title">Embedding Expressions in JSX</h3>
+              <p class="section-content">In the example below, we declare a variable called name and then use it inside JSX by wrapping it in curly braces:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const</span> name <span class="code-symbol">= '</span>Josh Perez<span class="code-symbol">'</span>
+    <span class="code-keyword">const</span> element <span class="code-symbol">= &lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello,<span class="code-symbol">{</span>name<span class="code-symbol">}&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
 
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-variable">element</span><span class="code-symbol">,</span>
-    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">You can put any valid JavaScript expression inside the curly braces in JSX. For example, 2 + 2, user.firstName, or formatName(user) are all valid JavaScript expressions.</p>
-            <p class="section-content">In the example below, we embed the result of calling a JavaScript function, formatName(user), into an &lt;h1&gt; element.</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function</span> <span class="code-variable">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">) {</span>
-    <span class="code-keyword">return</span> <span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function">firstName</span> <span class="code-symbol"> + ' ' + </span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function">lastName</span><span class="code-symbol">;</span>
-  <span class="code-symbol">}</span>
-
-  <span class="code-keyword">const </span>user <span class="code-symbol">= {</span>
-    <span class="code-variable">firstName</span><span class="code-symbol">: '</span>Harper<span class="code-symbol">',</span>
-    <span class="code-variable">lastName</span><span class="code-symbol">: '</span>Perez<span class="code-symbol">'</span>
-  <span class="code-symbol">};</span>
-
-  <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-      Hello, <span class="code-symbol">{</span><span class="code-function">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">)}!</span>
-    <span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-  <span class="code-symbol">);</span>
-
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-variable">element</span><span class="code-symbol">,</span>
-    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">We split JSX over multiple lines for readability. While it isn’t required, when doing this, we also recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">JSX is an Expression Too</h3>
-            <p class="section-content">After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.</p>
-            <p class="section-content">This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-variable">getGreeting</span><span class="code-symbol">(</span><userspan class="code-symbol">) {</userspan>
-    <span class="code-keyword">if </span><span class="code-symbol">(</span>user<span class="code-symbol">) {</span>
-      <span class="code-keyword">return</span> <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, <span class="code-symbol">{</span><span class="code-function">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">)}!</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-variable">element</span><span class="code-symbol">,</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">You can put any valid JavaScript expression inside the curly braces in JSX. For example, 2 + 2, user.firstName, or formatName(user) are all valid JavaScript expressions.</p>
+              <p class="section-content">In the example below, we embed the result of calling a JavaScript function, formatName(user), into an &lt;h1&gt; element.</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function</span> <span class="code-variable">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">) {</span>
+      <span class="code-keyword">return</span> <span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function">firstName</span> <span class="code-symbol"> + ' ' + </span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function">lastName</span><span class="code-symbol">;</span>
     <span class="code-symbol">}</span>
-  <span class="code-keyword">return</span> <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, Stranger.<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Specifying Attributes with JSX</h3>
-            <p class="section-content">You may use quotes to specify string literals as attributes:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= &lt;</span><span class="htmltag">div</span><span class="code-symbol">&gt; </span><span class="code-function">tabIndex</span><span class="code-symbol">="0"&gt;</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>;
-              </code>
-            </pre>
-            <p class="section-content">You may also use curly braces to embed a JavaScript expression in an attribute:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= &lt;</span><span class="code-htmltag">img</span> <span class="code-function">src</span><span class="code-symbol">={</span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function"></span>avatarUrl<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">img</span><span class="code-symbol">&gt;</span>;
-              </code>
-            </pre>
-            <p class="section-content">Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute. You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.</p>
-            <div class="section-box-container">
-              <div class="section-box-titlebar">
-                <div class="section-box-title">Warning:</div>
-              </div>
-              <div class="section-box-content">
-                Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
-                <p>For example, class becomes className in JSX, and tabindex becomes tabIndex.</p>
-              </div>
-            </div>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Specifying Children with JSX</h3>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= &lt;</span><span class="code-htmltag">img</span> <span class="code-function">src</span><span class="code-symbol">={</span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function"></span>avatarUrl<span class="code-symbol">}</span><span class="code-symbol"><span class="code-symbol"> /&gt;;</span>
-              </code>
-            </pre>
-            <p class="section-content">JSX tags may contain children:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello!<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>Good to see you here.<span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
-    <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">JSX Prevents Injection Attacks</h3>
-            <p class="section-content">It is safe to embed user input in JSX:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>title <span class="code-symbol">= </span><span class="code-variable">response</span><span class="code-symbol">.</span><span class="code-function">potentiallyMaliciousInput</span><span class="code-symbol">;</span>
-  <span class="code-comment">// This is safe:</span>
-  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;{</span>title<span class="code-symbol">}&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-              </code>
-            </pre>
-            <p class="section-content">By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent XSS (cross-site-scripting) attacks.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">JSX Represents Objects</h3>
-            <p class="section-content">Babel compiles JSX down to React.createElement() calls.</p>
-            <p class="section-content">These two examples are identical:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">h1 </span><span class="code-variable">className</span><span class="code-symbol">="</span>greeting<span class="code-symbol">"&gt;</span>
-      Hello, world!
-    <span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">createElement</span><span class="code-symbol">(</span>
-    <span class="code-symbol">'</span><span class="code-htmltag">h1</span><span class="code-symbol">',</span>
-    <span class="code-symbol">{</span><span class="code-variable">className</span><span class="code-symbol">: '</span>greeting<span class="code-symbol">'},</span>
-    <span class="code-symbol">'</span>Hello, world!<span class="code-symbol">'</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object like this:</p>
-            <pre>
-              <code class="code">
-  <span class="code-comment">// Note: this structure is simplified</span>
-  <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
-    <span class="code-variable">type</span><span class="code-symbol">: '</span><span class="code-htmltag">h1</span><span class="code-symbol">',</span>
-    <span class="code-variablw">props</span><span class="code-symbol">: {</span>
-      <span class="code-variable">className</span><span class="code-symbol">: '</span>greeting<span class="code-symbol">'</span>
-      <span class="code-variable">children</span><span class="code-symbol">: '</span>Hello, world!<span class="code-symbol">'</span>
-    <span class="code-symbol">}</span>
-  <span class="code-symbol">};</span>
-              </code>
-            </pre>
-            <p class="section-content">These objects are called “React elements”. You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.</p>
-            <p class="section-content">We will explore rendering React elements to the DOM in the next section.</p>
-            <div class="section-box-container">
-              <div class="section-box-titlebar">Tip</div>
-              <div class="section-box-content">We recommend using the “Babel” language definition for your editor of choice so that both ES6 and JSX code is properly highlighted. This website uses the Oceanic Next color scheme which is compatible with it.</div>
-            </div>
-          </article>
-        </section>
 
-        <section class="main-section" id="section_rendering-elements">
-          <header>Rendering Elements</header>
-          <article class="section-container">
-            <p class="main-section-description">Elements are the smallest building blocks of React apps.</p>
-            <p class="section-content">An element describes what you want to see on the screen:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-              </code>
-            </pre>
-            <p class="section-content">Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
-            <div class="section-box-container">
-              <div class="section-box-titlebar">
-                <div class="section-box-title">Note:</div>
-              </div>
-              <div class="section-box-content">One might confuse elements with a more widely known concept of “components”. We will introduce components in the next section. Elements are what components are “made of”, and we encourage you to read this section before jumping ahead.</div>
-            </div>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Rendering an Element into the DOM</h3>
-            <p class="section-content">Let’s say there is a <div> somewhere in your HTML file:</p>
-            <pre>
-              <code class="code">
-  <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">id</span><span class="code-symbol">="</span>root<span class="code-symbol">"</span><span class="code-symbol">&gt;</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-              </code>
-            </pre>
-            <p class="section-content">We call this a “root” DOM node because everything inside it will be managed by React DOM.</p>
-            <p class="section-content">Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.</p>
-            <p class="section-contnet">To render a React element into a root DOM node, pass both to ReactDOM.render():</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span><span class="code-variable">element</span><span class="code-symbol">,</span><span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span><span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">It displays “Hello, world” on the page.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Updating the Rendered Element</h3>
-            <p class="section-content">React elements are immutable. Once you create an element, you can’t change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.</p>
-            <p class="section-content">With our knowledge so far, the only way to update the UI is to create a new element, and pass it to ReactDOM.render().</p>
-            <p class="section-content">Consider this ticking clock example:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">tick</span><span class="code-symbol">() {</span>
+    <span class="code-keyword">const </span>user <span class="code-symbol">= {</span>
+      <span class="code-variable">firstName</span><span class="code-symbol">: '</span>Harper<span class="code-symbol">',</span>
+      <span class="code-variable">lastName</span><span class="code-symbol">: '</span>Perez<span class="code-symbol">'</span>
+    <span class="code-symbol">};</span>
+
     <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+        Hello, <span class="code-symbol">{</span><span class="code-function">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">)}!</span>
+      <span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+    <span class="code-symbol">);</span>
+
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-variable">element</span><span class="code-symbol">,</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">We split JSX over multiple lines for readability. While it isn’t required, when doing this, we also recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">JSX is an Expression Too</h3>
+              <p class="section-content">After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.</p>
+              <p class="section-content">This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-variable">getGreeting</span><span class="code-symbol">(</span><userspan class="code-symbol">) {</userspan>
+      <span class="code-keyword">if </span><span class="code-symbol">(</span>user<span class="code-symbol">) {</span>
+        <span class="code-keyword">return</span> <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, <span class="code-symbol">{</span><span class="code-function">formatName</span><span class="code-symbol">(</span>user<span class="code-symbol">)}!</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">}</span>
+    <span class="code-keyword">return</span> <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello, Stranger.<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Specifying Attributes with JSX</h3>
+              <p class="section-content">You may use quotes to specify string literals as attributes:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= &lt;</span><span class="htmltag">div</span><span class="code-symbol">&gt; </span><span class="code-function">tabIndex</span><span class="code-symbol">="0"&gt;</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>;
+                </code>
+              </pre>
+              <p class="section-content">You may also use curly braces to embed a JavaScript expression in an attribute:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= &lt;</span><span class="code-htmltag">img</span> <span class="code-function">src</span><span class="code-symbol">={</span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function"></span>avatarUrl<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">img</span><span class="code-symbol">&gt;</span>;
+                </code>
+              </pre>
+              <p class="section-content">Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute. You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.</p>
+              <div class="section-box-container">
+                <div class="section-box-titlebar">
+                  <div class="section-box-title">Warning:</div>
+                </div>
+                <div class="section-box-content">
+                  Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
+                  <p>For example, class becomes className in JSX, and tabindex becomes tabIndex.</p>
+                </div>
+              </div>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Specifying Children with JSX</h3>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= &lt;</span><span class="code-htmltag">img</span> <span class="code-function">src</span><span class="code-symbol">={</span><span class="code-variable">user</span><span class="code-symbol">.</span><span class="code-function"></span>avatarUrl<span class="code-symbol">}</span><span class="code-symbol"><span class="code-symbol"> /&gt;;</span>
+                </code>
+              </pre>
+              <p class="section-content">JSX tags may contain children:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>Hello!<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>Good to see you here.<span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">JSX Prevents Injection Attacks</h3>
+              <p class="section-content">It is safe to embed user input in JSX:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>title <span class="code-symbol">= </span><span class="code-variable">response</span><span class="code-symbol">.</span><span class="code-function">potentiallyMaliciousInput</span><span class="code-symbol">;</span>
+    <span class="code-comment">// This is safe:</span>
+    <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;{</span>title<span class="code-symbol">}&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+                </code>
+              </pre>
+              <p class="section-content">By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent XSS (cross-site-scripting) attacks.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">JSX Represents Objects</h3>
+              <p class="section-content">Babel compiles JSX down to React.createElement() calls.</p>
+              <p class="section-content">These two examples are identical:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">h1 </span><span class="code-variable">className</span><span class="code-symbol">="</span>greeting<span class="code-symbol">"&gt;</span>
+        Hello, world!
+      <span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">createElement</span><span class="code-symbol">(</span>
+      <span class="code-symbol">'</span><span class="code-htmltag">h1</span><span class="code-symbol">',</span>
+      <span class="code-symbol">{</span><span class="code-variable">className</span><span class="code-symbol">: '</span>greeting<span class="code-symbol">'},</span>
+      <span class="code-symbol">'</span>Hello, world!<span class="code-symbol">'</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object like this:</p>
+              <pre>
+                <code class="code">
+    <span class="code-comment">// Note: this structure is simplified</span>
+    <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+      <span class="code-variable">type</span><span class="code-symbol">: '</span><span class="code-htmltag">h1</span><span class="code-symbol">',</span>
+      <span class="code-variablw">props</span><span class="code-symbol">: {</span>
+        <span class="code-variable">className</span><span class="code-symbol">: '</span>greeting<span class="code-symbol">'</span>
+        <span class="code-variable">children</span><span class="code-symbol">: '</span>Hello, world!<span class="code-symbol">'</span>
+      <span class="code-symbol">}</span>
+    <span class="code-symbol">};</span>
+                </code>
+              </pre>
+              <p class="section-content">These objects are called “React elements”. You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.</p>
+              <p class="section-content">We will explore rendering React elements to the DOM in the next section.</p>
+              <div class="section-box-container">
+                <div class="section-box-titlebar">Tip</div>
+                <div class="section-box-content">We recommend using the “Babel” language definition for your editor of choice so that both ES6 and JSX code is properly highlighted. This website uses the Oceanic Next color scheme which is compatible with it.</div>
+              </div>
+            </article>
+          </section>
+
+          <section class="main-section" id="section_rendering-elements">
+            <header>Rendering Elements</header>
+            <article class="section-container">
+              <p class="main-section-description">Elements are the smallest building blocks of React apps.</p>
+              <p class="section-content">An element describes what you want to see on the screen:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+                </code>
+              </pre>
+              <p class="section-content">Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
+              <div class="section-box-container">
+                <div class="section-box-titlebar">
+                  <div class="section-box-title">Note:</div>
+                </div>
+                <div class="section-box-content">One might confuse elements with a more widely known concept of “components”. We will introduce components in the next section. Elements are what components are “made of”, and we encourage you to read this section before jumping ahead.</div>
+              </div>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Rendering an Element into the DOM</h3>
+              <p class="section-content">Let’s say there is a <div> somewhere in your HTML file:</p>
+              <pre>
+                <code class="code">
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">id</span><span class="code-symbol">="</span>root<span class="code-symbol">"</span><span class="code-symbol">&gt;</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+                </code>
+              </pre>
+              <p class="section-content">We call this a “root” DOM node because everything inside it will be managed by React DOM.</p>
+              <p class="section-content">Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.</p>
+              <p class="section-contnet">To render a React element into a root DOM node, pass both to ReactDOM.render():</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span><span class="code-variable">element</span><span class="code-symbol">,</span><span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span><span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">It displays “Hello, world” on the page.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Updating the Rendered Element</h3>
+              <p class="section-content">React elements are immutable. Once you create an element, you can’t change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.</p>
+              <p class="section-content">With our knowledge so far, the only way to update the UI is to create a new element, and pass it to ReactDOM.render().</p>
+              <p class="section-content">Consider this ticking clock example:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">tick</span><span class="code-symbol">() {</span>
+      <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">().</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+      <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span><span class="code-variable">element</span><span class="code-symbol">,</span><span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span><span class="code-symbol">);</span>`
+    <span class="code-symbol">}</span>
+
+    <span class="code-function">setInterval</span><span class="code-symbol">(</span>ticks<span class="code-symbol">, </span>1000<span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">It calls ReactDOM.render() every second from a setInterval() callback.</p>
+              <div class="section-box-container">
+                <div class="section-box-titlebar">
+                  <div class="section-box-title">Note:</div>
+                </div>
+                <div class="section-box-content">
+                  <p>In practice, most React apps only call ReactDOM.render() once. In the next sections we will learn how such code gets encapsulated into stateful components.</p>
+                  <p>We recommend that you don’t skip topics because they build on each other.</p>
+                </div>
+              </div>
+            </article>
+          </section>
+
+
+          <section class="main-section" id="section_components-and-props">
+            <header>Components and Props</header>
+            <article class="section-container">
+              <p class="main-section-description">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components.</p>
+              <p class="section-content">Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Function and Class Components</h3>
+              <p class="section-content">The simplest way to define a component is to write a JavaScript function:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">Welcome</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, <span class="code-symbol">{</span>props<span class="code-symbol">.</span>name<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.</p>
+              <p class="section-content">You can also use an ES6 class to define a component:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">class </span><span class="code-variable">Welcome </span><span class="code-keyword">extends</span><span class="code-variable"> React</span><span class="code-symbol">.</span><span class="code-function">Component</span><span class="code-symbol"> {</span>
+      <span class="code-function">render</span><span class="code-symbol">() {</span>
+        <span class="code-keyword">return </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>name<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">}</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">The above two components are equivalent from React’s point of view.</p>
+              <p class="section-content">Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Rendering a Component</h3>
+              <p class="section-content">Previously, we only encountered React elements that represent DOM tags:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-symbol">/&gt;</span>
+                </code>
+              </pre>
+              <p class="section-content">However, elements can also represent user-defined components:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Sara<span class="code-symbol">" /&gt;;</span>
+                </code>
+              </pre>
+              <p class="section-content">When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”.</p>
+              <p class="section-content">For example, this code renders “Hello, Sara” on the page:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">Welcome</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>name<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;;</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Sara<span class="code-symbol">" /&gt;;</span>
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-variable">element</span><span class="code-symbol">,</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">Let’s recap what happens in this example:</p>
+              <ol>
+                <li>We call ReactDOM.render() with the &lt;Welcome name="Sara" /&gt; element.</li>
+                <li>React calls the Welcome component with {name: 'Sara'} as the props.</li>
+                <li>Our Welcome component returns a &lt;h1&gt;Hello, Sara&lt;/h1&gt; element as the result.</li>
+                <li>React DOM efficiently updates the DOM to match &lt;h1&gt;Hello, Sara&lt;/h1&gt;.</li>
+              </ol>
+              <div class="section-box-container">
+                <div class="section-box-titlebar">
+                  <div class="section-box-title">Note: Always start component names with a capital letter.</div>
+                </div>
+                <div class="section-box-content">
+                  <p>React treats components starting with lowercase letters as DOM tags. For example, &lt;div /&gt; represents an HTML div tag, but &lt;Welcome /&gt; represents a component and requires Welcome to be in scope.</p>
+                  <p>To learn more about the reasoning behind this convention, please read JSX In Depth.</p>
+                </div>
+              </div>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Composing Components</h3>
+              <p class="section-content">Components can refer to other components in their output. This lets us use the same component abstraction for any level of detail. A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components.</p>
+              <p class="section-content">For example, we can create an App component that renders Welcome many times:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">Welcome</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>name<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;;</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-keyword">function </span><span class="code-function">App</span><span class="code-symbol">(</span><span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Sara<span class="code-symbol">" /&gt;;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Cahal<span class="code-symbol">" /&gt;;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Edite<span class="code-symbol">" /&gt;;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">App</span><span class="code-symbol"> /&gt;,</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">Typically, new React apps have a single App component at the very top. However, if you integrate React into an existing app, you might start bottom-up with a small component like Button and gradually work your way to the top of the view hierarchy.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="sectin-title">Extracting Components</h3>
+              <p class="section-content">Don’t be afraid to split components into smaller components.</p>
+              <p class="section-content">For example, consider this Comment component:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">Comment</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment<span class="code-symbol">"&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo<span class="code-symbol">"&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">img </span><span class="code-variable">className</span><span class="code-symbol">="</span>Avatar<span class="code-symbol">"</span>
+              <span class="code-variable">src</span><span class="code-symbol">=</span><span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>avatarUrl<span class="code-symbol">}</span>
+              <span class="code-variable">alt</span><span class="code-symbol">=</span><span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
+            <span class="code-symbol">/&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo-name<span class="code-symbol">"&gt;</span>
+              <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
+            <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-text<span class="code-symbol">"&gt;</span>
+            <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">}</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-date<span class="code-symbol">"&gt;</span>
+            <span class="code-symbol">{</span><span class="code-function">formatDate</span><span class="code-symbol">(</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">)</span><span class="code-symbol">}</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">It accepts author (an object), text (a string), and date (a date) as props, and describes a comment on a social media website.</p>
+              <p class="section-content">This component can be tricky to change because of all the nesting, and it is also hard to reuse individual parts of it. Let’s extract a few components from it.</p>
+              <p class="section-content">First, we will extract Avatar:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">Avatar</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">img </span><span class="code-variable">className</span><span class="code-symbol">="</span>Avatar<span class="code-symbol">"</span>
+        <span class="code-variable">src</span><span class="code-symbol">=</span><span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>avatarUrl<span class="code-symbol">}</span>
+        <span class="code-variable">alt</span><span class="code-symbol">=</span><span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
+      <span class="code-symbol">/&gt;</span>
+
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+
+                </code>
+              </pre>
+              <p class="section-content">The Avatar doesn’t need to know that it is being rendered inside a Comment. This is why we have given its prop a more generic name: user rather than author.</p>
+              <p class="section-content">We recommend naming props from the component’s own point of view rather than the context in which it is being used.</p>
+              <p class="section-content">We can now simplify Comment a tiny bit:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">Comment</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment<span class="code-symbol">"&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo<span class="code-symbol">"&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">Avatar </span><span class="code-variable">user</span><span class="code-symbol">="{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">} /&gt</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo-name<span class="code-symbol">"&gt;</span>
+              <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
+            <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-text<span class="code-symbol">"&gt;</span>
+            <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">}</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-date<span class="code-symbol">"&gt;</span>
+            <span class="code-symbol">{</span><span class="code-function">formatDate</span><span class="code-symbol">(</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">)</span><span class="code-symbol">}</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="content-code">Next, we will extract a UserInfo component that renders an Avatar next to the user’s name:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">UserInfo</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo<span class="code-symbol">"&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">Avatar </span><span class="code-variable">user</span><span class="code-symbol">="{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>user<span class="code-symbol">} /&gt</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo-name<span class="code-symbol">"&gt;</span>
+            <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>user<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">This lets us simplify Comment even further:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">Comment</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment<span class="code-symbol">"&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">UserInfo </span><span class="code-variable">user</span><span class="code-symbol">="{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">} /&gt</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-text<span class="code-symbol">"&gt;</span>
+            <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">}</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-date<span class="code-symbol">"&gt;</span>
+            <span class="code-symbol">{</span><span class="code-function">formatDate</span><span class="code-symbol">(</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">)</span><span class="code-symbol">}</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-symbol">);</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">Extracting components might seem like grunt work at first, but having a palette of reusable components pays off in larger apps. A good rule of thumb is that if a part of your UI is used several times (Button, Panel, Avatar), or is complex enough on its own (App, FeedStory, Comment), it is a good candidate to be a reusable component.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Props are Read-Only</h3>
+              <p class="section-content">Whether you declare a component as a function or a class, it must never modify its own props. Consider this sum function:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">sum</span><span class="code-symbol">(</span>a<span class="code-symbol">,</span> b<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span>a <span class="code-symbol">+</span> b<span class="code-symbol">;</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">Such functions are called “pure” because they do not attempt to change their inputs, and always return the same result for the same inputs.</p>
+              <p class="section-content">In contrast, this function is impure because it changes its own input:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">withdraw</span><span class="code-symbol">(</span>account<span class="code-symbol">,</span> amount<span class="code-symbol">) {</span>
+      <span class="code-variable">account</span><span class="code-symbol">.</span>total<span class="code-symbol"> -=</span> amount<span class="code-symbol">;</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">React is pretty flexible but it has a single strict rule:</p>
+              <p class="section-content"><strong>All React components must act like pure functions with respect to their props.</strong></p>
+              <p class="section-content">Of course, application UIs are dynamic and change over time. In the next section, we will introduce a new concept of “state”. State allows React components to change their output over time in response to user actions, network responses, and anything else, without violating this rule.</p>
+            </article>
+          </section>
+
+          <section class="main-section" id="section_state-and-lifecycle">
+            <header>State and Lifecycle</header>
+            <article class="section-container">
+              <p class="main-section-description">This page introduces the concept of state and lifecycle in a React component.</p>
+              <p class="section-content">Consider the ticking clock example from one of the previous sections. In Rendering Elements, we have only learned one way to update the UI. We call ReactDOM.render() to change the rendered output:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">tick</span><span class="code-symbol">(</span><span class="code-symbol">) {</span>
+      <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
       <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
         <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
         <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">().</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
       <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-    <span class="code-symbol">);</span>
-    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span><span class="code-variable">element</span><span class="code-symbol">,</span><span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span><span class="code-symbol">);</span>`
-  <span class="code-symbol">}</span>
+      <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+        <span class="code-variable">element</span><span class="code-symbol">,</span>
+        <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+        <span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
 
-  <span class="code-function">setInterval</span><span class="code-symbol">(</span>ticks<span class="code-symbol">, </span>1000<span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">It calls ReactDOM.render() every second from a setInterval() callback.</p>
-            <div class="section-box-container">
-              <div class="section-box-titlebar">
-                <div class="section-box-title">Note:</div>
-              </div>
-              <div class="section-box-content">
-                <p>In practice, most React apps only call ReactDOM.render() once. In the next sections we will learn how such code gets encapsulated into stateful components.</p>
-                <p>We recommend that you don’t skip topics because they build on each other.</p>
-              </div>
-            </div>
-          </article>
-        </section>
-
-
-        <section class="main-section" id="section_components-and-props">
-          <header>Components and Props</header>
-          <article class="section-container">
-            <p class="main-section-description">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components.</p>
-            <p class="section-content">Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Function and Class Components</h3>
-            <p class="section-content">The simplest way to define a component is to write a JavaScript function:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">Welcome</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, <span class="code-symbol">{</span>props<span class="code-symbol">.</span>name<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.</p>
-            <p class="section-content">You can also use an ES6 class to define a component:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">class </span><span class="code-variable">Welcome </span><span class="code-keyword">extends</span><span class="code-variable"> React</span><span class="code-symbol">.</span><span class="code-function">Component</span><span class="code-symbol"> {</span>
-    <span class="code-function">render</span><span class="code-symbol">() {</span>
-      <span class="code-keyword">return </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>name<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-    <span class="code-symbol">}</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">The above two components are equivalent from React’s point of view.</p>
-            <p class="section-content">Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Rendering a Component</h3>
-            <p class="section-content">Previously, we only encountered React elements that represent DOM tags:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-symbol">/&gt;</span>
-              </code>
-            </pre>
-            <p class="section-content">However, elements can also represent user-defined components:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Sara<span class="code-symbol">" /&gt;;</span>
-              </code>
-            </pre>
-            <p class="section-content">When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”.</p>
-            <p class="section-content">For example, this code renders “Hello, Sara” on the page:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">Welcome</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>name<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;;</span>
-  <span class="code-symbol">}</span>
-
-  <span class="code-keyword">const </span>element <span class="code-symbol">= </span><span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Sara<span class="code-symbol">" /&gt;;</span>
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-variable">element</span><span class="code-symbol">,</span>
-    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">Let’s recap what happens in this example:</p>
-            <ol>
-              <li>We call ReactDOM.render() with the &lt;Welcome name="Sara" /&gt; element.</li>
-              <li>React calls the Welcome component with {name: 'Sara'} as the props.</li>
-              <li>Our Welcome component returns a &lt;h1&gt;Hello, Sara&lt;/h1&gt; element as the result.</li>
-              <li>React DOM efficiently updates the DOM to match &lt;h1&gt;Hello, Sara&lt;/h1&gt;.</li>
-            </ol>
-            <div class="section-box-container">
-              <div class="section-box-titlebar">
-                <div class="section-box-title">Note: Always start component names with a capital letter.</div>
-              </div>
-              <div class="section-box-content">
-                <p>React treats components starting with lowercase letters as DOM tags. For example, &lt;div /&gt; represents an HTML div tag, but &lt;Welcome /&gt; represents a component and requires Welcome to be in scope.</p>
-                <p>To learn more about the reasoning behind this convention, please read JSX In Depth.</p>
-              </div>
-            </div>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Composing Components</h3>
-            <p class="section-content">Components can refer to other components in their output. This lets us use the same component abstraction for any level of detail. A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components.</p>
-            <p class="section-content">For example, we can create an App component that renders Welcome many times:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">Welcome</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>name<span class="code-symbol">}</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;;</span>
-  <span class="code-symbol">}</span>
-
-  <span class="code-keyword">function </span><span class="code-function">App</span><span class="code-symbol">(</span><span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">(</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Sara<span class="code-symbol">" /&gt;;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Cahal<span class="code-symbol">" /&gt;;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">Welcome </span<span class="code-variable">name</span><span class="code-symbol">="</span>Edite<span class="code-symbol">" /&gt;;</span>
-      <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-    <span class="code-symbol">);</span>
-  <span class="code-symbol">}</span>
-
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">App</span><span class="code-symbol"> /&gt;,</span>
-    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">Typically, new React apps have a single App component at the very top. However, if you integrate React into an existing app, you might start bottom-up with a small component like Button and gradually work your way to the top of the view hierarchy.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="sectin-title">Extracting Components</h3>
-            <p class="section-content">Don’t be afraid to split components into smaller components.</p>
-            <p class="section-content">For example, consider this Comment component:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">Comment</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">(</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment<span class="code-symbol">"&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo<span class="code-symbol">"&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">img </span><span class="code-variable">className</span><span class="code-symbol">="</span>Avatar<span class="code-symbol">"</span>
-            <span class="code-variable">src</span><span class="code-symbol">=</span><span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>avatarUrl<span class="code-symbol">}</span>
-            <span class="code-variable">alt</span><span class="code-symbol">=</span><span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
-          <span class="code-symbol">/&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo-name<span class="code-symbol">"&gt;</span>
-            <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
-          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+      <span class="code-function">setInterval</span><span class="code-symbol">(</span>ticks<span class="code-symbol">, </span>1000<span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">In this section, we will learn how to make the Clock component truly reusable and encapsulated. It will set up its own timer and update itself every second.</p>
+              <p class="section-content">We can start by encapsulating how the clock looks:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">Clock</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-variable">props</span><span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
         <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-text<span class="code-symbol">"&gt;</span>
-          <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">}</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-date<span class="code-symbol">"&gt;</span>
-          <span class="code-symbol">{</span><span class="code-function">formatDate</span><span class="code-symbol">(</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">)</span><span class="code-symbol">}</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
       <span class="code-symbol">);</span>
     <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">It accepts author (an object), text (a string), and date (a date) as props, and describes a comment on a social media website.</p>
-            <p class="section-content">This component can be tricky to change because of all the nesting, and it is also hard to reuse individual parts of it. Let’s extract a few components from it.</p>
-            <p class="section-content">First, we will extract Avatar:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">Avatar</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">(</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">img </span><span class="code-variable">className</span><span class="code-symbol">="</span>Avatar<span class="code-symbol">"</span>
-      <span class="code-variable">src</span><span class="code-symbol">=</span><span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>avatarUrl<span class="code-symbol">}</span>
-      <span class="code-variable">alt</span><span class="code-symbol">=</span><span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
-    <span class="code-symbol">/&gt;</span>
 
-    <span class="code-symbol">);</span>
-  <span class="code-symbol">}</span>
-
-              </code>
-            </pre>
-            <p class="section-content">The Avatar doesn’t need to know that it is being rendered inside a Comment. This is why we have given its prop a more generic name: user rather than author.</p>
-            <p class="section-content">We recommend naming props from the component’s own point of view rather than the context in which it is being used.</p>
-            <p class="section-content">We can now simplify Comment a tiny bit:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">Comment</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">(</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment<span class="code-symbol">"&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo<span class="code-symbol">"&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">Avatar </span><span class="code-variable">user</span><span class="code-symbol">="{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">} /&gt</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo-name<span class="code-symbol">"&gt;</span>
-            <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
-          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-text<span class="code-symbol">"&gt;</span>
-          <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">}</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-date<span class="code-symbol">"&gt;</span>
-          <span class="code-symbol">{</span><span class="code-function">formatDate</span><span class="code-symbol">(</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">)</span><span class="code-symbol">}</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-    <span class="code-symbol">);</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="content-code">Next, we will extract a UserInfo component that renders an Avatar next to the user’s name:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">UserInfo</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">(</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo<span class="code-symbol">"&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">Avatar </span><span class="code-variable">user</span><span class="code-symbol">="{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>user<span class="code-symbol">} /&gt</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>UserInfo-name<span class="code-symbol">"&gt;</span>
-          <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>user<span class="code-symbol">.</span>name<span class="code-symbol">}</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-    <span class="code-symbol">);</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">This lets us simplify Comment even further:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">Comment</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">(</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment<span class="code-symbol">"&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">UserInfo </span><span class="code-variable">user</span><span class="code-symbol">="{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>author<span class="code-symbol">} /&gt</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-text<span class="code-symbol">"&gt;</span>
-          <span class="code-symbol">{</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">}</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div </span><span class="code-variable">className</span><span class="code-symbol">="</span>Comment-date<span class="code-symbol">"&gt;</span>
-          <span class="code-symbol">{</span><span class="code-function">formatDate</span><span class="code-symbol">(</span><span class="code-keyword">props</span><span class="code-symbol">.</span>text<span class="code-symbol">)</span><span class="code-symbol">}</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-    <span class="code-symbol">);</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">Extracting components might seem like grunt work at first, but having a palette of reusable components pays off in larger apps. A good rule of thumb is that if a part of your UI is used several times (Button, Panel, Avatar), or is complex enough on its own (App, FeedStory, Comment), it is a good candidate to be a reusable component.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Props are Read-Only</h3>
-            <p class="section-content">Whether you declare a component as a function or a class, it must never modify its own props. Consider this sum function:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">sum</span><span class="code-symbol">(</span>a<span class="code-symbol">,</span> b<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span>a <span class="code-symbol">+</span> b<span class="code-symbol">;</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">Such functions are called “pure” because they do not attempt to change their inputs, and always return the same result for the same inputs.</p>
-            <p class="section-content">In contrast, this function is impure because it changes its own input:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">withdraw</span><span class="code-symbol">(</span>account<span class="code-symbol">,</span> amount<span class="code-symbol">) {</span>
-    <span class="code-variable">account</span><span class="code-symbol">.</span>total<span class="code-symbol"> -=</span> amount<span class="code-symbol">;</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">React is pretty flexible but it has a single strict rule:</p>
-            <p class="section-content"><strong>All React components must act like pure functions with respect to their props.</strong></p>
-            <p class="section-content">Of course, application UIs are dynamic and change over time. In the next section, we will introduce a new concept of “state”. State allows React components to change their output over time in response to user actions, network responses, and anything else, without violating this rule.</p>
-          </article>
-        </section>
-
-        <section class="main-section" id="section_state-and-lifecycle">
-          <header>State and Lifecycle</header>
-          <article class="section-container">
-            <p class="main-section-description">This page introduces the concept of state and lifecycle in a React component.</p>
-            <p class="section-content">Consider the ticking clock example from one of the previous sections. In Rendering Elements, we have only learned one way to update the UI. We call ReactDOM.render() to change the rendered output:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">tick</span><span class="code-symbol">(</span><span class="code-symbol">) {</span>
-    <span class="code-keyword">const </span>element <span class="code-symbol">= (</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">().</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
-    <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-      <span class="code-variable">element</span><span class="code-symbol">,</span>
-      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+    <span class="code-keyword">function </span><span class="code-function">tick</span><span class="code-symbol">(</span><span class="code-symbol">) {</span>
+      <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+        <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-variable">date</span><span class="code-symbol">="{</span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()} /&gt</span>
+        <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
       <span class="code-symbol">);</span>
     <span class="code-symbol">}</span>
 
     <span class="code-function">setInterval</span><span class="code-symbol">(</span>ticks<span class="code-symbol">, </span>1000<span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">In this section, we will learn how to make the Clock component truly reusable and encapsulated. It will set up its own timer and update itself every second.</p>
-            <p class="section-content">We can start by encapsulating how the clock looks:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">function </span><span class="code-function">Clock</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">return </span><span class="code-symbol">(</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-variable">props</span><span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-    <span class="code-symbol">);</span>
-  <span class="code-symbol">}</span>
-
-  <span class="code-keyword">function </span><span class="code-function">tick</span><span class="code-symbol">(</span><span class="code-symbol">) {</span>
+                </code>
+              </pre>
+              <p class="section-content">However, it misses a crucial requirement: the fact that the Clock sets up a timer and updates the UI every second should be an implementation detail of the Clock.</p>
+              <p class="section-content">Ideally we want to write this once and have the Clock update itself:</p>
+              <pre>
+                <code class="code">
     <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-      <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-variable">date</span><span class="code-symbol">="{</span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()} /&gt</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
       <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
     <span class="code-symbol">);</span>
-  <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">To implement this, we need to add “state” to the Clock component.</p>
+              <p class="section-content">State is similar to props, but it is private and fully controlled by the component.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Converting a Function to a Class</h3>
+              <p class="section-content">You can convert a function component like Clock to a class in five steps:</p>
+              <ol>
+                <li>Create an ES6 class, with the same name, that extends React.Component.</li>
+                <li>Add a single empty method to it called render().</li>
+                <li>Move the body of the function into the render() method.</li>
+                <li>Replace props with this.props in the render() body.</li>
+                <li>Delete the remaining empty function declaration.</li>
+              </ol>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+      <span class="code-function">render</span><span class="code-symbol">() {</span>
+        <span class="code-keyword">return </span><span class="code-symbol">(</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">Clock is now defined as a class rather than a function.</p>
+              <p class="section-content">The render method will be called each time an update happens, but as long as we render <Clock /> into the same DOM node, only a single instance of the Clock class will be used. This lets us use additional features such as local state and lifecycle methods.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Adding Local State to a Class</h3>
+              <p class="section-content">We will move the date from props to state in three steps:</p>
+              <ol>
+                <li>Replace this.props.date with this.state.date in the render() method:</li>
+              </ol>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+      <span class="code-function">render</span><span class="code-symbol">() {</span>
+        <span class="code-keyword">return </span><span class="code-symbol">(</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <ol start="2">
+                <li>Add a class constructor that assigns the initial this.state:</li>
+              </ol>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+      <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+        <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+        <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+      <span class="code-symbol">}</span>
 
-  <span class="code-function">setInterval</span><span class="code-symbol">(</span>ticks<span class="code-symbol">, </span>1000<span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">However, it misses a crucial requirement: the fact that the Clock sets up a timer and updates the UI every second should be an implementation detail of the Clock.</p>
-            <p class="section-content">Ideally we want to write this once and have the Clock update itself:</p>
-            <pre>
-              <code class="code">
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
-    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">To implement this, we need to add “state” to the Clock component.</p>
-            <p class="section-content">State is similar to props, but it is private and fully controlled by the component.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Converting a Function to a Class</h3>
-            <p class="section-content">You can convert a function component like Clock to a class in five steps:</p>
-            <ol>
-              <li>Create an ES6 class, with the same name, that extends React.Component.</li>
-              <li>Add a single empty method to it called render().</li>
-              <li>Move the body of the function into the render() method.</li>
-              <li>Replace props with this.props in the render() body.</li>
-              <li>Delete the remaining empty function declaration.</li>
-            </ol>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
-    <span class="code-function">render</span><span class="code-symbol">() {</span>
-      <span class="code-keyword">return </span><span class="code-symbol">(</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">);</span>
+      <span class="code-function">render</span><span class="code-symbol">() {</span>
+        <span class="code-keyword">return </span><span class="code-symbol">(</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
     <span class="code-symbol">}</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">Clock is now defined as a class rather than a function.</p>
-            <p class="section-content">The render method will be called each time an update happens, but as long as we render <Clock /> into the same DOM node, only a single instance of the Clock class will be used. This lets us use additional features such as local state and lifecycle methods.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Adding Local State to a Class</h3>
-            <p class="section-content">We will move the date from props to state in three steps:</p>
-            <ol>
-              <li>Replace this.props.date with this.state.date in the render() method:</li>
-            </ol>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
-    <span class="code-function">render</span><span class="code-symbol">() {</span>
-      <span class="code-keyword">return </span><span class="code-symbol">(</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">);</span>
-    <span class="code-symbol">}</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <ol start="2">
-              <li>Add a class constructor that assigns the initial this.state:</li>
-            </ol>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+                </code>
+              </pre>
+              <p class="section-content">Note how we pass props to the base constructor:</p>
+              <pre>
+                <code class="code">
     <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
       <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
       <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
     <span class="code-symbol">}</span>
-
-    <span class="code-function">render</span><span class="code-symbol">() {</span>
-      <span class="code-keyword">return </span><span class="code-symbol">(</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">);</span>
-    <span class="code-symbol">}</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">Note how we pass props to the base constructor:</p>
-            <pre>
-              <code class="code">
-  <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-    <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
-    <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">Class components should always call the base constructor with props.</p>
-            <ol start="3">
-              <li>Remove the date prop from the &lt;Clock /&gt; element:</li>
-            </ol>
-            <pre>
-              <code class="code">
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
-    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">We will later add the timer code back to the component itself.</p>
-            <p class="section-content">The result looks like this:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
-    <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-      <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
-      <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
-    <span class="code-symbol">}</span>
-
-    <span class="code-function">render</span><span class="code-symbol">() {</span>
-      <span class="code-keyword">return </span><span class="code-symbol">(</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">);</span>
-    <span class="code-symbol">}</span>
-  <span class="code-symbol">}</span>
-
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
-    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">Next, we’ll make the Clock set up its own timer and update itself every second.</p>
-          </article>
-          <article class="section-container">
-            <h3 class="section-title">Adding Lifecycle Methods to a Class</h3>
-            <p class="section-content">In applications with many components, it’s very important to free up resources taken by the components when they are destroyed.</p>
-            <p class="section-content">We want to set up a timer whenever the Clock is rendered to the DOM for the first time. This is called “mounting” in React.</p>
-            <p class="section-content">We also want to clear that timer whenever the DOM produced by the Clock is removed. This is called “unmounting” in React.</p>
-            <p class="section-content">We can declare special methods on the component class to run some code when a component mounts and unmounts:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
-    <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-      <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
-      <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
-    <span class="code-symbol">}</span>
-
-    <span class="code-function">componentDidMount</span><span class="code-symbol">() {</span>
-
-    <span class="code-symbol">}</span>
-
-    <span class="code-function">componentWillMount</span><span class="code-symbol">() {</span>
-
-    <span class="code-symbol">}</span>
-
-    <span class="code-function">render</span><span class="code-symbol">() {</span>
-      <span class="code-keyword">return </span><span class="code-symbol">(</span>
-        <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
-        <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-      <span class="code-symbol">);</span>
-    <span class="code-symbol">}</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">These methods are called “lifecycle methods”.</p>
-            <p class="section-content">The componentDidMount() method runs after the component output has been rendered to the DOM. This is a good place to set up a timer:</p>
-            <pre>
-              <code class="code">
-  <span class="code-function">componentDidMount</span><span class="code-symbol">() {</span>
-    <span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol"> = </span><span class="code-function">setInterval</span><span class="code-symbol">(</span>
-      <span class="code-symbol">() => </span><span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">tick</span><span class="code-symbol">(),</span>
-      1000
+                </code>
+              </pre>
+              <p class="section-content">Class components should always call the base constructor with props.</p>
+              <ol start="3">
+                <li>Remove the date prop from the &lt;Clock /&gt; element:</li>
+              </ol>
+              <pre>
+                <code class="code">
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
     <span class="code-symbol">);</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">Note how we save the timer ID right on this.</p>
-            <p class="section-content">While this.props is set up by React itself and this.state has a special meaning, you are free to add additional fields to the class manually if you need to store something that doesn’t participate in the data flow (like a timer ID).</p>
-            <p class="section-content">We will tear down the timer in the componentWillUnmount() lifecycle method:</p>
-            <pre>
-              <code class="code">
-  <span class="code-function">componentWillMount</span><span class="code-symbol">() {</span>
-    <span class="code-function">clearInterval</span><span class="code-symbol">(</span><span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol">);</span>
-  <span class="code-symbol">}</span>
-              </code>
-            </pre>
-            <p class="section-content">Finally, we will implement a method called tick() that the Clock component will run every second.</p>
-            <p class="section-content">It will use this.setState() to schedule updates to the component local state:</p>
-            <pre>
-              <code class="code">
-  <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
-    <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
-      <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
-      <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+                </code>
+              </pre>
+              <p class="section-content">We will later add the timer code back to the component itself.</p>
+              <p class="section-content">The result looks like this:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+      <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+        <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+        <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+      <span class="code-symbol">}</span>
+
+      <span class="code-function">render</span><span class="code-symbol">() {</span>
+        <span class="code-keyword">return </span><span class="code-symbol">(</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
     <span class="code-symbol">}</span>
 
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">Next, we’ll make the Clock set up its own timer and update itself every second.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Adding Lifecycle Methods to a Class</h3>
+              <p class="section-content">In applications with many components, it’s very important to free up resources taken by the components when they are destroyed.</p>
+              <p class="section-content">We want to set up a timer whenever the Clock is rendered to the DOM for the first time. This is called “mounting” in React.</p>
+              <p class="section-content">We also want to clear that timer whenever the DOM produced by the Clock is removed. This is called “unmounting” in React.</p>
+              <p class="section-content">We can declare special methods on the component class to run some code when a component mounts and unmounts:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+      <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+        <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+        <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+      <span class="code-symbol">}</span>
+
+      <span class="code-function">componentDidMount</span><span class="code-symbol">() {</span>
+
+      <span class="code-symbol">}</span>
+
+      <span class="code-function">componentWillMount</span><span class="code-symbol">() {</span>
+
+      <span class="code-symbol">}</span>
+
+      <span class="code-function">render</span><span class="code-symbol">() {</span>
+        <span class="code-keyword">return </span><span class="code-symbol">(</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">These methods are called “lifecycle methods”.</p>
+              <p class="section-content">The componentDidMount() method runs after the component output has been rendered to the DOM. This is a good place to set up a timer:</p>
+              <pre>
+                <code class="code">
     <span class="code-function">componentDidMount</span><span class="code-symbol">() {</span>
       <span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol"> = </span><span class="code-function">setInterval</span><span class="code-symbol">(</span>
         <span class="code-symbol">() => </span><span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">tick</span><span class="code-symbol">(),</span>
         1000
       <span class="code-symbol">);</span>
     <span class="code-symbol">}</span>
-
+                </code>
+              </pre>
+              <p class="section-content">Note how we save the timer ID right on this.</p>
+              <p class="section-content">While this.props is set up by React itself and this.state has a special meaning, you are free to add additional fields to the class manually if you need to store something that doesn’t participate in the data flow (like a timer ID).</p>
+              <p class="section-content">We will tear down the timer in the componentWillUnmount() lifecycle method:</p>
+              <pre>
+                <code class="code">
     <span class="code-function">componentWillMount</span><span class="code-symbol">() {</span>
       <span class="code-function">clearInterval</span><span class="code-symbol">(</span><span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol">);</span>
     <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">Finally, we will implement a method called tick() that the Clock component will run every second.</p>
+              <p class="section-content">It will use this.setState() to schedule updates to the component local state:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">class </span><span class="code-variable">Clock </span><span class="code-keyword">extends </span><span class="code-variable">React</span><span class="code-symbol">.</span><span class="code-function">Component </span><span class="code-symbol">{</span>
+      <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+        <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+        <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span><span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()};</span>
+      <span class="code-symbol">}</span>
 
-    <span class="code-function">tick</span><span class="code-symbol">() {</span>
-      <span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">seState</span><span class="code-symbol">({</span>
-        <span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()</span>
-      <span class="code-symbol">});</span>
+      <span class="code-function">componentDidMount</span><span class="code-symbol">() {</span>
+        <span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol"> = </span><span class="code-function">setInterval</span><span class="code-symbol">(</span>
+          <span class="code-symbol">() => </span><span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">tick</span><span class="code-symbol">(),</span>
+          1000
+        <span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
+
+      <span class="code-function">componentWillMount</span><span class="code-symbol">() {</span>
+        <span class="code-function">clearInterval</span><span class="code-symbol">(</span><span class="code-keyword">this</span><span class="code-symbol">.</span>timerID<span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
+
+      <span class="code-function">tick</span><span class="code-symbol">() {</span>
+        <span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">seState</span><span class="code-symbol">({</span>
+          <span class="code-variable">date</span><span class="code-symbol">: </span><span class="code-keyword">new </span><span class="code-variable">Date</span><span class="code-symbol">()</span>
+        <span class="code-symbol">});</span>
+      <span class="code-symbol">}</span>
+
+      <span class="code-function">render</span><span class="code-symbol">() {</span>
+        <span class="code-keyword">return </span><span class="code-symbol">(</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
+            <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
+        <span class="code-symbol">);</span>
+      <span class="code-symbol">}</span>
     <span class="code-symbol">}</span>
 
-    <span class="code-function">render</span><span class="code-symbol">() {</span>
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">Now the clock ticks every second.</p>
+              <p class="section-content">Let’s quickly recap what’s going on and the order in which the methods are called:</p>
+              <ol>
+                <li>When <Clock /> is passed to ReactDOM.render(), React calls the constructor of the Clock component. Since Clock needs to display the current time, it initializes this.state with an object including the current time. We will later update this state.</li>
+                <li>React then calls the Clock component’s render() method. This is how React learns what should be displayed on the screen. React then updates the DOM to match the Clock’s render output.</li>
+                <li>When the Clock output is inserted in the DOM, React calls the componentDidMount() lifecycle method. Inside it, the Clock component asks the browser to set up a timer to call the component’s tick() method once a second.</li>
+                <li>Every second the browser calls the tick() method. Inside it, the Clock component schedules a UI update by calling setState() with an object containing the current time. Thanks to the setState() call, React knows the state has changed, and calls the render() method again to learn what should be on the screen. This time, this.state.date in the render() method will be different, and so the render output will include the updated time. React updates the DOM accordingly.</li>
+                <li>If the Clock component is ever removed from the DOM, React calls the componentWillUnmount() lifecycle method so the timer is stopped.</li>
+              </ol>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Using State Correctly</h3>
+              <p class="section-content">There are three things you should know about setState().</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">Do Not Modify State Directly</h3>
+              <p class="section-content">For example, this will not re-render a component:</p>
+              <pre>
+                <code class="code">
+    <span class="code-comment">// Wrong</span>
+    <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>comment<span class="code-symbol"> = '</span>Hello<span class="code-symbol">';</span>
+                </code>
+              </pre>
+              <p class="section-content">Instead, use setState():</p>
+              <pre>
+                <code class="code">
+    <span class="code-comment">// Correct</span>
+    <span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">setState</span><span class="code-symbol">({</span><span class="code-variable">comment</span><span class="code-symbol">: '</span>Hello<span class="code-symbol">';})</span>
+                </code>
+              </pre>
+            <p class="section-content">The only place where you can assign this.state is the constructor.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">State Updates May Be Asynchronous</h3>
+              <p class="section-content">React may batch multiple setState() calls into a single update for performance.</p>
+              <p class="section-content">Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state.</p>
+              <p class="section-content">For example, this code may fail to update the counter:</p>
+              <pre>
+                <code class="code">
+    <span class="code-comment">// Wrong</span>
+    <span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">setState</span><span class="code-symbol">({</span>
+      <span class="code-variable">counter</span><span class="code-symbol">: </span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>counter<span class="code-symbol"> + </span><span class="code-keyword">this</span><span class="code-symbol">.</span>props<span class="code-symbol">.</span>increment<span class="code-symbol">,</span>
+    <span class="code-symbol">});</span>
+                </code>
+              </pre>
+              <p class="section-content">To fix it, use a second form of setState() that accepts a function rather than an object. That function will receive the previous state as the first argument, and the props at the time the update is applied as the second argument:</p>
+              <pre>
+                <code class="code">
+    <span class="code-comment">// Correct</span>
+    <span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">setState</span><span class="code-symbol">((</span>state <span class="code-symbol">,</span>props<span class="code-symbol">) => ({</span>
+      <span class="code-variable">counter</span><span class="code-symbol">: </span>state<span class="code-symbol">.</span>counter<span class="code-symbol"> + </span>props<span class="code-symbol">.</span>increment
+    <span class="code-symbol">}));</span>
+                </code>
+              </pre>
+              <p class="section-content">We used an arrow function above, but it also works with regular functions:</p>
+              <pre>
+                <code class="code">
+    <span class="code-comment">// Correct</span>
+    <span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">setState</span><span class="code-symbol">(</span><span class="code-keyword">function</span><span class="code-symbol">(</span>state <span class="code-symbol">,</span>props<span class="code-symbol">) => ({</span>
+      <span class="code-variable">counter</span><span class="code-symbol">: </span>state<span class="code-symbol">.</span>counter<span class="code-symbol"> + </span>props<span class="code-symbol">.</span>increment
+    <span class="code-symbol">}));</span>
+                </code>
+              </pre>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">State Updates are Merged</h3>
+              <p class="section-content">When you call setState(), React merges the object you provide into the current state.</p>
+              <p class="section-content">For example, your state may contain several independent variables:</p>
+              <pre>
+                <code class="code">
+    <span class="code-function">constructor</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">super</span><span class="code-symbol">(</span>props<span class="code-symbol">);</span>
+      <span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol"> = {</span>
+        <span class="code-variable">posts</span><span class="code-symbol">: [],</span>
+        <span class="code-variable">comments</span><span class="code-symbol">: []</span>
+      <span class="code-symbol">};</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">Then you can update them independently with separate setState() calls:</p>
+              <pre>
+                <code class="code">
+    <span class="code-function">componentDidMount</span><span class="code-symbol">() {</span>
+      <span class="code-function">fetchPosts</span><span class="code-symbol">().</span><span class="code-function">then</span><span class="code-symbol">(</span>response <span class="code-symbol">=> {</span>
+        <span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">setState</span><span class="code-symbol">({</span>
+          <span class="code-variable">posts</span><span class="code-symbol">: </span>response<span class="code-symbol">.</span>posts
+        <span class="code-symbol">});</span>
+      <span class="code-symbol">});</span>
+
+      <span class="code-function">fetchComments</span><span class="code-symbol">().</span><span class="code-function">then</span><span class="code-symbol">(</span>response <span class="code-symbol">=> {</span>
+        <span class="code-keyword">this</span><span class="code-symbol">.</span><span class="code-function">setState</span><span class="code-symbol">({</span>
+          <span class="code-variable">comments</span><span class="code-symbol">: </span>response<span class="code-symbol">.</span>comments
+        <span class="code-symbol">});</span>
+      <span class="code-symbol">});</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">The merging is shallow, so this.setState({comments}) leaves this.state.posts intact, but completely replaces this.state.comments.</p>
+            </article>
+            <article class="section-container">
+              <h3 class="section-title">The Data Flows Down</h3>
+              <p class="section-content">Neither parent nor child components can know if a certain component is stateful or stateless, and they shouldn’t care whether it is defined as a function or a class.</p>
+              <p class="section-content">This is why state is often called local or encapsulated. It is not accessible to any component other than the one that owns and sets it.</p>
+              <p class="section-content">A component may choose to pass its state down as props to its child components:</p>
+              <pre>
+                <code class="code">
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+                </code>
+              </pre>
+              <p class="section-content">This also works for user-defined components:</p>
+              <pre>
+                <code class="code">
+    <span class="code-symbol">&lt;</span><span class="code-htmltag">FormattedDate </span><span class="code-variable">date</span><span class="code-symbol">=</span><span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">}</span><span class="code-symbol"> /&gt;</span>
+                </code>
+              </pre>
+              <p class="section-content">The FormattedDate component would receive the date in its props and wouldn’t know whether it came from the Clock’s state, from the Clock’s props, or was typed by hand:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">FormattedDate</span><span class="code-symbol">(</span>props<span class="code-symbol">) {</span>
+      <span class="code-keyword">return </span><span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>It is <span class="code-symbol">{</span>props<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;;</span>
+    <span class="code-symbol">}</span>
+                </code>
+              </pre>
+              <p class="section-content">This is commonly called a “top-down” or “unidirectional” data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.</p>
+              <p class="section-content">If you imagine a component tree as a waterfall of props, each component’s state is like an additional water source that joins it at an arbitrary point but also flows down.</p>
+              <p class="section-content">To show that all components are truly isolated, we can create an App component that renders three &lt;Clock&gt;s:</p>
+              <pre>
+                <code class="code">
+    <span class="code-keyword">function </span><span class="code-function">App</span><span class="code-symbol">() {</span>
       <span class="code-keyword">return </span><span class="code-symbol">(</span>
         <span class="code-symbol">&lt;</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span></h1>Hello, world<span class="code-symbol">&lt;/</span><span class="code-htmltag">h1</span><span class="code-symbol">&gt;</span>
-          <span class="code-symbol">&lt;</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span></h1>It is <span class="code-symbol">{</span><span class="code-keyword">this</span><span class="code-symbol">.</span>state<span class="code-symbol">.</span>date<span class="code-symbol">.</span><span class="code-function">toLocaleTimeStirng</span><span class="code-symbol">()}.</span><span class="code-symbol">&lt;/</span><span class="code-htmltag">h2</span><span class="code-symbol">&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock</span><span class="code-symbol"> /&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock</span><span class="code-symbol"> /&gt;</span>
+          <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock</span><span class="code-symbol"> /&gt;</span>
         <span class="code-symbol">&lt;/</span><span class="code-htmltag">div</span><span class="code-symbol">&gt;</span>
       <span class="code-symbol">);</span>
     <span class="code-symbol">}</span>
-  <span class="code-symbol">}</span>
 
-  <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
-    <span class="code-symbol">&lt;</span><span class="code-htmltag">Clock </span><span class="code-symbol">/&gt;,</span>
-    <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
-  <span class="code-symbol">);</span>
-              </code>
-            </pre>
-            <p class="section-content">Now the clock ticks every second.</p>
-            <p class="section-content">Let’s quickly recap what’s going on and the order in which the methods are called:</p>
-            <ol>
-              <li>When <Clock /> is passed to ReactDOM.render(), React calls the constructor of the Clock component. Since Clock needs to display the current time, it initializes this.state with an object including the current time. We will later update this state.</li>
-              <li>React then calls the Clock component’s render() method. This is how React learns what should be displayed on the screen. React then updates the DOM to match the Clock’s render output.</li>
-              <li>When the Clock output is inserted in the DOM, React calls the componentDidMount() lifecycle method. Inside it, the Clock component asks the browser to set up a timer to call the component’s tick() method once a second.</li>
-              <li>Every second the browser calls the tick() method. Inside it, the Clock component schedules a UI update by calling setState() with an object containing the current time. Thanks to the setState() call, React knows the state has changed, and calls the render() method again to learn what should be on the screen. This time, this.state.date in the render() method will be different, and so the render output will include the updated time. React updates the DOM accordingly.</li>
-              <li>If the Clock component is ever removed from the DOM, React calls the componentWillUnmount() lifecycle method so the timer is stopped.</li>
-            </ol>
-          </article>
-        </section>
-      </main>
+    <span class="code-variable">ReactDOM</span><span class="code-symbol">.</span><span class="code-function">render</span><span class="code-symbol">(</span>
+      <span class="code-symbol">&lt;</span><span class="code-htmltag">App </span><span class="code-symbol">/&gt;,</span>
+      <span class="code-variable">document</span><span class="code-symbol">.</span><span class="code-function">getElementById</span><span class="code-symbol">('</span>root<span class="code-symbol">')</span>
+    <span class="code-symbol">);</span>
+                </code>
+              </pre>
+              <p class="section-content">Each Clock sets up its own timer and updates independently.</p>
+              <p class="section-content">In React apps, whether a component is stateful or stateless is considered an implementation detail of the component that may change over time. You can use stateless components inside stateful components, and vice versa.</p>
+            </article>
+          </section>
+        </main>
+      </div>
     </div>
-  </div>
-</body>
+    
+  </body>
 
 </html>

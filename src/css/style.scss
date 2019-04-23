@@ -91,6 +91,11 @@ code {
   .nav-links {
     margin: 40px 0;
 
+    .fa {
+      padding-right: 5px;
+      font-weight: 900;;
+    }
+
     a:hover {
       color: red;
     }

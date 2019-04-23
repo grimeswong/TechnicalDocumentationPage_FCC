@@ -41,19 +41,15 @@ p {
 
 pre {
   margin: 10px 0 30px 0;
-  padding: 10px;
+  padding: 0 10px;
   color: $code-text-color;
   background-color: $code-background-color;
   border-radius: 10px;
-  white-space: pre-wrap;       /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: normal;
 }
 
-main {
-  margin: 30px 0px;
+code {
+  white-space: pre;
 }
 
 .row {
@@ -69,9 +65,16 @@ main {
   top: 0;
   left: 15%;
   width: 20%;
+  /*  for scrollable side bar */
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
 
   .navbar-title {
-    margin: 20px 0px;
+    padding: 20px 0px;
+    text-align: center;
+    color: $logo-title-color;
+    background-color: $logo-background-color;
   }
 
   ul {
@@ -101,7 +104,7 @@ main {
   }
   header {
     padding: 0 5px;
-    font-size: 1rem;
+    font-size: 2rem;
     color: $logo-title-color;
   }
 
@@ -121,7 +124,7 @@ main {
 }
 
 .main-section header {
-  padding: 15px 0px;
+  padding: 100px 0px 50px ;
   font-size: 3.5em;
   font-weight: bold;
   font-family: Roboto, sans-serif;
@@ -135,7 +138,7 @@ main {
 }
 
 .section-container {
-  margin: 5rem 0;
+  margin: 0rem 0 5rem;
 
   .section-title {
     padding-bottom: 10px;

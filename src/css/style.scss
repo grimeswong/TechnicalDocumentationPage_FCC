@@ -87,8 +87,18 @@ code {
     color: $nav-menu-color;
   }
 
+
   .nav-links {
     margin: 40px 0;
+
+    a:hover {
+      color: red;
+    }
+
+    .nav-link {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
 
     li {
       margin: 20px 0px;
@@ -97,6 +107,10 @@ code {
 
   .nav-sub-links {
     padding-left: 30px;
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 }
 

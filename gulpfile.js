@@ -60,7 +60,8 @@ function convertsasstocss() {
 function compresshtml() {
   return src(srcHtml)
     .pipe(htmlmin({
-      collapseWhitespace: true
+      collapseWhitespace: true,
+      removeComments: true
     }))
     .pipe(dest(destHtml))
     .pipe(browsersync.stream());
@@ -113,5 +114,6 @@ exports.livereload = livereload;
  *
  **/
 
-exports.watch = parallel(watchchange, livereload);  // A watch task for tracking the change of html and css files
+exports.build = series(parallel(compressimg, convertsasstocss, compressjs),compresshtml);
+exports.watch = series(parallel(compressimg, convertsasstocss, compressjs),compresshtml ,parallel(watchchange, livereload));  // A watch task for tracking the change of html and css files
 exports.default = series(watchchange, compressimg);  // Defined a default tasks for executing one after another by using the function "series"

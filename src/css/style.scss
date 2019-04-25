@@ -10,6 +10,7 @@ $logo-title-color: rgb(97, 218, 248);
 $logo-background-color: rgba(0, 0, 0, 0.9);
 $nav-menu-color: rgb(30, 158, 251);
 $nav-background-color: rgb(255, 255, 255);
+$nav-menu-hover-color: rgb(255, 0, 0);
 
 $section-title-color: rgb(30, 158, 251);
 $section-text-color: rgb(0,0,0);
@@ -60,6 +61,7 @@ code {
 /**
   *  Nav Bar
   */
+
 #navbar {
   position: fixed;
   top: 0;
@@ -68,9 +70,9 @@ code {
   min-width: 200px;
 
   /*  for scrollable side bar */
-  overflow-y: scroll;
-  top: 0;
-  bottom: 0;
+  overflow-y: auto;
+  top: 0;  // To keep the scrollbar reach the top
+  bottom: 0;  // To keep the scrollbar reach the bottom
 
   .navbar-title {
     padding: 20px 0px;
@@ -84,11 +86,9 @@ code {
     list-style-type: none;
   }
 
-
   a {
     color: $nav-menu-color;
   }
-
 
   .nav-links {
     margin: 40px 0;
@@ -99,7 +99,7 @@ code {
     }
 
     a:hover {
-      color: red;
+      color: $nav-menu-hover-color;
     }
 
     .nav-link {
@@ -119,6 +119,101 @@ code {
     a:hover {
       text-decoration: none;
     }
+  }
+}
+
+.open-btn-tablet {
+  display: none;
+}
+
+.close-btn-tablet {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #navbar {
+    display: none;
+    width: 40%;
+    padding-right: 50px;
+    z-index: 2;
+    background-color: rgb(0, 0, 0);
+
+    ul {
+      background-color: rgb(0, 0, 0);
+    }
+
+    .close-btn-tablet {
+      display: block;
+      width: 50px;
+      height: 60px;
+      position: absolute;
+      top: 20px;
+      right: 15px;
+      font-size: 36px;
+      color: $logo-title-color;
+      background-color: $logo-background-color;
+      border: none;
+    }
+
+    .close-btn-tablet:hover {
+      color: $nav-menu-hover-color;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .open-btn-tablet {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    width: 70px;
+    z-index: 1;
+    height: 70px;
+    cursor: pointer;
+    border: none;
+
+    .mobile-menu-icon {
+      z-index: 2;
+      display: block;
+      width: 50px;
+      height: 8px;
+      background-color: $nav-menu-color;
+      border-radius: 10px;
+    }
+
+    #menu-icon-top {
+      position: absolute;
+      top: 10px;
+    }
+
+    #menu-icon-middle {
+      position: absolute;
+      top: 25px;
+    }
+
+    #menu-icon-bottom {
+      position: absolute;
+      top: 40px;
+    }
+  }
+
+  .open-btn-tablet:focus {
+    outline: none;
+  }
+
+  .open-btn-tablet:hover {
+    .mobile-menu-icon {
+      background-color: $nav-menu-hover-color;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  #navbar {
+    display: block !important;
+    left: 15% !important;
   }
 }
 
@@ -147,10 +242,28 @@ code {
 /**
   *  Main Pages
   */
+
 #main-doc {
   position: absolute;
   left: 35%;
   max-width: 50%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #main-doc {
+    position: relative;
+    left: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    background-color: $nav-background-color !important;
+  }
+  #main-doc {
+    margin-left: 0 !important;
+  }
 }
 
 .main-section header {

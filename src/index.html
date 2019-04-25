@@ -18,7 +18,13 @@
     <!-- User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
     <div class="container-fluid">
       <div class="row">
-        <nav class="col-md-4" id="navbar">
+        <button class="open-btn-tablet">
+          <span class=mobile-menu-icon id="menu-icon-top"></span>
+          <span class=mobile-menu-icon id="menu-icon-middle"></span>
+          <span class=mobile-menu-icon id="menu-icon-bottom"></span>
+        </button>
+        <nav class="col-lg-4 col-md-0 col-sm-0 navbar-tablet" id="navbar">
+          <button class="close-btn-tablet">X</button>
           <div class="logo-container">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="React_Logo">
             <header>React</header>
@@ -73,7 +79,7 @@
             </li>
           </ul>
         </nav>
-        <main class="col-md-8" id="main-doc">
+        <main class="col-lg-8 col-md-12 col-sm-12" id="main-doc">
           <!-- Each .main-section should contain at least 10 p elements, 5 code elements and 5 li items total -->
 
           <section class="main-section" id="hello_world">

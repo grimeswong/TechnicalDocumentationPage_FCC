@@ -11,7 +11,9 @@ const htmlmin = require('gulp-htmlmin'); // plugin for minify HTML
 const autoprefixer = require('gulp-autoprefixer');  // plugin for prefix css
 const sass = require('gulp-sass');  // plugin for convert sass/scss to css
 const browsersync = require('browser-sync').create(); // plugin for live css reload & browser syncing
-const rename = require('gulp-rename');
+const rename = require('gulp-rename');  // plugin for rename the processed files
+const uglify = require('gulp-uglify'); // plugin for minify javascript
+const concat = require('gulp-concat'); // plugin for concate files
 
 /*** Source and destination folders ***/
 const srcImg = 'src/img/**/*';  // ** (wildcard) means include all file in current folders and its subfolders
@@ -21,6 +23,8 @@ const srcScss = "src/css/**/style.scss";
 const destCss = 'public/css';
 const srcHtml = 'src/index.html';
 const destHtml = 'public/';
+const srcJs = 'src/js/**/*';
+const destJs = 'public/js';
 
 
 function compressimg() {
@@ -71,6 +75,10 @@ function watchchange() {
   .on('change', (path, stats) => {
     console.log(`HTML files in ${path} are minifying ...`);
   });
+  watch([srcJs], compressjs)
+  .on('change', (path, stats) => {
+    console.log(`Javascript files in ${path} are minifying ...`);
+  });
 }
 
 /**
@@ -84,9 +92,18 @@ function livereload() {
   });
 }
 
+function compressjs() {
+  return src(srcJs)
+  .pipe(uglify())
+  .pipe(concat('bundle.js'))  // bundle all the javascript files
+  .pipe(dest(destJs))
+  .pipe(browsersync.stream());
+}
+
 exports.compressimg = compressimg;  // The name of the tasks runner and export it
 exports.compresscss = compresscss;
 exports.compresshtml = compresshtml;
+exports.compressjs = compressjs;
 exports.convertsasstocss = convertsasstocss;
 exports.watchchange = watchchange;
 exports.livereload = livereload;

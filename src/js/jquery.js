@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('.expandable').click(function() {
-        $(this).siblings('.nav-sub-links:first').toggle('fast')
+        $(this).children("i").toggle(".fa-chevron-down");
+        $(this).siblings('.nav-sub-links').toggle('fast');
     });
 });

@@ -14,6 +14,7 @@ const browsersync = require('browser-sync').create(); // plugin for live css rel
 const rename = require('gulp-rename');  // plugin for rename the processed files
 const uglify = require('gulp-uglify'); // plugin for minify javascript
 const concat = require('gulp-concat'); // plugin for concate files
+const sourcemaps = require('gulp-sourcemaps'); // plugin for getting the original codes for debugging
 
 /*** Source and destination folders ***/
 const srcImg = 'src/img/**/*';  // ** (wildcard) means include all file in current folders and its subfolders
@@ -95,8 +96,10 @@ function livereload() {
 
 function compressjs() {
   return src(srcJs)
+  .pipe(sourcemaps.init())
   .pipe(uglify())
   .pipe(concat('bundle.js'))  // bundle all the javascript files
+  .pipe(sourcemaps.write())
   .pipe(dest(destJs))
   .pipe(browsersync.stream());
 }

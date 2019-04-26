@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
 
     $('.close-btn').click(function() {
-        $('#navbar').css('left','-40%');
+        $('#navbar').css('left','-100%');
         $('#main-doc').css('margin-left', '0');
         $('#main-doc').removeClass('overlay');
         $('pre').removeClass('overlay');

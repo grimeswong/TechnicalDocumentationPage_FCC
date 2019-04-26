@@ -122,11 +122,8 @@ code {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
   #navbar {
     left:-40%;
     width: 40%;
@@ -138,17 +135,18 @@ code {
     ul {
       background-color: rgb(0, 0, 0);
     }
+  }
+
+  .open-btn {
+    display: block;
+  }
 
   .close-btn {
     display: block;
   }
+
 }
 
-@media (max-width: 991px) {
-  .open-btn {
-    display: block;
-  }
-}
 
 @media (min-width: 992px) {
   #navbar {
@@ -163,6 +161,19 @@ code {
   .close-btn {
     display: none;
   }
+}
+
+@media (max-width: 767px) {
+  #navbar {
+    width: 100%;
+    opacity: .9;
+
+    ul {
+      text-align: center;
+      font-size: 1.2em;
+    }
+  }
+
 }
 
 .logo-container {
@@ -266,7 +277,7 @@ code {
   max-width: 50%;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   #main-doc {
     position: relative;
     left: 0;

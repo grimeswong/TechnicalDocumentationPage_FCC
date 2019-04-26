@@ -5,15 +5,20 @@ $(document).ready(function(){
     });
 
     $('.open-btn-tablet').click(function() {
-        $('#navbar').fadeIn(500).css({'display':'block', 'left':'0'});
-        $('#main-doc').css('margin-left','15%');
-        $('main').css('background-color','rgba(0,0,0,0.6)')
+        $('#navbar').css('left','0');
+        $('#main-doc').css('margin-left','14%');
+        $('#main-doc').addClass('overlay');
+        $('pre').addClass('overlay');
+        $('.section-box-container').addClass('overlay');
+
     });
 
     $('.close-btn-tablet').click(function() {
-        $('#navbar').fadeOut(500).css({'display':'none', 'left':'0'});
+        $('#navbar').css('left','-40%');
         $('#main-doc').css('margin-left', '0');
-        $('main').css('background-color','rgb(255,255,255)');
+        $('#main-doc').removeClass('overlay');
+        $('pre').removeClass('overlay');
+        $('.section-box-container').removeClass('overlay');
     });
 
 });

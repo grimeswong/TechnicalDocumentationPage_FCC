@@ -122,22 +122,14 @@ code {
   }
 }
 
-.open-btn-tablet {
-  display: none;
-}
-
-.close-btn-tablet {
-  display: none;
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
   #navbar {
-    display: none;
+    left:-40%;
     width: 40%;
     padding-right: 50px;
-    z-index: 2;
+    z-index: 99;
     background-color: rgb(0, 0, 0);
-
+    transition: all 0.5s;
     ul {
       background-color: rgb(0, 0, 0);
     }
@@ -157,6 +149,9 @@ code {
 
     .close-btn-tablet:hover {
       color: $nav-menu-hover-color;
+    }
+    .close-btn-tablet:focus {
+      outline: none;
     }
   }
 }
@@ -215,6 +210,14 @@ code {
     display: block !important;
     left: 15% !important;
   }
+
+  .open-btn-tablet {
+    display: none;
+  }
+
+  .close-btn-tablet {
+    display: none;
+  }
 }
 
 .logo-container {
@@ -254,6 +257,7 @@ code {
     position: relative;
     left: 0;
     max-width: 100%;
+    transition: all 0.5s;
   }
 }
 
@@ -313,6 +317,13 @@ code {
   & .section-box-content {
     padding: 20px 20px;
   }
+}
+
+.overlay {
+  z-index: 2;
+  background-color: rgba(0,0,0, 0.6);
+  opacity: .8;
+  transition: all 0.5s;
 }
 
 /*** code sections ***/

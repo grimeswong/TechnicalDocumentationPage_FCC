@@ -158,6 +158,9 @@ code {
     .close-btn-tablet:hover {
       color: $nav-menu-hover-color;
     }
+    .close-btn-tablet:focus {
+      outline: none;
+    }
   }
 }
 

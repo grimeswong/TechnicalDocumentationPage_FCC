@@ -122,6 +122,10 @@ code {
   }
 }
 
+@media (max-width: 767px) {
+
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   #navbar {
     left:-40%;
@@ -130,57 +134,20 @@ code {
     z-index: 99;
     background-color: rgb(0, 0, 0);
     transition: all 0.5s;
+
     ul {
       background-color: rgb(0, 0, 0);
     }
 
-    .close-btn {
-      display: block;
-      width: 50px;
-      height: 60px;
-      position: absolute;
-      top: 20px;
-      right: 15px;
-      font-size: 36px;
-      color: $logo-title-color;
-      background-color: $logo-background-color;
-      border: none;
-    }
-
-    .close-btn:hover {
-      color: $nav-menu-hover-color;
-    }
-    .close-btn:focus {
-      outline: none;
-    }
+  .close-btn {
+    display: block;
   }
 }
 
 @media (max-width: 991px) {
   .open-btn {
     display: block;
-    position: fixed;
-    top: 20px;
-    left: 30px;
-    width: 70px;
-    z-index: 1;
-    height: 70px;
-    cursor: pointer;
-    border: none;
-
-
   }
-
-  .open-btn:focus {
-    outline: none;
-  }
-
-  .open-btn:hover {
-    .mobile-menu-icon {
-      background-color: $nav-menu-hover-color;
-    }
-  }
-
 }
 
 @media (min-width: 992px) {
@@ -247,6 +214,46 @@ code {
 #menu-icon-bottom {
   position: absolute;
   top: 40px;
+}
+
+.open-btn {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  width: 70px;
+  z-index: 1;
+  height: 70px;
+  cursor: pointer;
+  border: none;
+}
+
+.open-btn:focus {
+  outline: none;
+}
+
+.open-btn:hover {
+  .mobile-menu-icon {
+    background-color: $nav-menu-hover-color;
+  }
+}
+
+.close-btn {
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 36px;
+  color: $logo-title-color;
+  background-color: $logo-background-color;
+  border: none;
+}
+
+.close-btn:hover {
+  color: $nav-menu-hover-color;
+}
+.close-btn:focus {
+  outline: none;
 }
 
 /**

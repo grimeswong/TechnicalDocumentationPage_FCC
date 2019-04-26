@@ -168,29 +168,7 @@ code {
     cursor: pointer;
     border: none;
 
-    .mobile-menu-icon {
-      z-index: 2;
-      display: block;
-      width: 50px;
-      height: 8px;
-      background-color: $nav-menu-color;
-      border-radius: 10px;
-    }
 
-    #menu-icon-top {
-      position: absolute;
-      top: 10px;
-    }
-
-    #menu-icon-middle {
-      position: absolute;
-      top: 25px;
-    }
-
-    #menu-icon-bottom {
-      position: absolute;
-      top: 40px;
-    }
   }
 
   .open-btn-tablet:focus {
@@ -240,6 +218,35 @@ code {
     margin: 15px 10px;
     padding: 10px;
   }
+}
+
+
+/**
+  *  Button & Icon
+  */
+
+.mobile-menu-icon {
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 8px;
+  background-color: $nav-menu-color;
+  border-radius: 10px;
+}
+
+#menu-icon-top {
+  position: absolute;
+  top: 10px;
+}
+
+#menu-icon-middle {
+  position: absolute;
+  top: 25px;
+}
+
+#menu-icon-bottom {
+  position: absolute;
+  top: 40px;
 }
 
 /**

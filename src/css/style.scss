@@ -104,7 +104,6 @@ code {
 
     .nav-link {
       font-weight: bold;
-      font-size: 1.1em;
     }
 
     li {
@@ -147,11 +146,22 @@ code {
 
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .nav-link {
+    font-size: 1.1em;
+  }
+}
+
 
 @media (min-width: 992px) {
   #navbar {
     display: block !important;
     left: 15% !important;
+  }
+
+  .nav-link {
+    font-size: 1.2em;
   }
 
   .open-btn {
@@ -170,6 +180,13 @@ code {
 
     ul {
       text-align: center;
+    }
+
+    .nav-link {
+      font-size: 1.5em;
+    }
+
+    .nav-sub-links {
       font-size: 1.2em;
     }
   }

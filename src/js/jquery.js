@@ -5,7 +5,6 @@ $(document).ready(function(){
     });
 
     $('.open-btn-tablet').click(function() {
-        $('#navbar').css('display','block');
         $('#navbar').css('left','0');
         $('#main-doc').css('margin-left','15%');
         $('main').css('background-color','rgba(0,0,0,0.6)')

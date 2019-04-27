@@ -104,7 +104,6 @@ code {
 
     .nav-link {
       font-weight: bold;
-      font-size: 1.1em;
     }
 
     li {
@@ -122,7 +121,8 @@ code {
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
+
   #navbar {
     left:-40%;
     width: 40%;
@@ -130,80 +130,29 @@ code {
     z-index: 99;
     background-color: rgb(0, 0, 0);
     transition: all 0.5s;
+
     ul {
       background-color: rgb(0, 0, 0);
     }
-
-    .close-btn-tablet {
-      display: block;
-      width: 50px;
-      height: 60px;
-      position: absolute;
-      top: 20px;
-      right: 15px;
-      font-size: 36px;
-      color: $logo-title-color;
-      background-color: $logo-background-color;
-      border: none;
-    }
-
-    .close-btn-tablet:hover {
-      color: $nav-menu-hover-color;
-    }
-    .close-btn-tablet:focus {
-      outline: none;
-    }
   }
-}
 
-@media (max-width: 991px) {
-  .open-btn-tablet {
+  .open-btn {
     display: block;
-    position: fixed;
-    top: 20px;
-    left: 30px;
-    width: 70px;
-    z-index: 1;
-    height: 70px;
-    cursor: pointer;
-    border: none;
-
-    .mobile-menu-icon {
-      z-index: 2;
-      display: block;
-      width: 50px;
-      height: 8px;
-      background-color: $nav-menu-color;
-      border-radius: 10px;
-    }
-
-    #menu-icon-top {
-      position: absolute;
-      top: 10px;
-    }
-
-    #menu-icon-middle {
-      position: absolute;
-      top: 25px;
-    }
-
-    #menu-icon-bottom {
-      position: absolute;
-      top: 40px;
-    }
   }
 
-  .open-btn-tablet:focus {
-    outline: none;
-  }
-
-  .open-btn-tablet:hover {
-    .mobile-menu-icon {
-      background-color: $nav-menu-hover-color;
-    }
+  .close-btn {
+    display: block;
   }
 
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .nav-link {
+    font-size: 1.1em;
+  }
+}
+
 
 @media (min-width: 992px) {
   #navbar {
@@ -211,13 +160,47 @@ code {
     left: 15% !important;
   }
 
-  .open-btn-tablet {
+  .nav-link {
+    font-size: 1.2em;
+  }
+
+  .open-btn {
     display: none;
   }
 
-  .close-btn-tablet {
+  .close-btn {
     display: none;
   }
+}
+
+@media (max-width: 767px) {
+
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .row {
+    width: 90%;
+  }
+
+  #navbar {
+    width: 100%;
+    opacity: .9;
+
+    ul {
+      text-align: center;
+    }
+
+    .nav-link {
+      font-size: 1.5em;
+    }
+
+    .nav-sub-links {
+      font-size: 1.2em;
+    }
+  }
+
 }
 
 .logo-container {
@@ -242,6 +225,76 @@ code {
   }
 }
 
+
+/**
+  *  Button & Icon
+  */
+
+.mobile-menu-icon {
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 8px;
+  background-color: $nav-menu-color;
+  border-radius: 10px;
+}
+
+#menu-icon-top {
+  position: absolute;
+  top: 10px;
+}
+
+#menu-icon-middle {
+  position: absolute;
+  top: 25px;
+}
+
+#menu-icon-bottom {
+  position: absolute;
+  top: 40px;
+}
+
+.open-btn {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  width: 70px;
+  z-index: 1;
+  height: 70px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.open-btn:focus {
+  outline: none;
+}
+
+.open-btn:hover {
+  .mobile-menu-icon {
+    background-color: $nav-menu-hover-color;
+  }
+}
+
+.close-btn {
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 36px;
+  color: $logo-title-color;
+  background-color: $logo-background-color;
+  border: none;
+}
+
+.close-btn:hover {
+  color: $nav-menu-hover-color;
+}
+.close-btn:focus {
+  outline: none;
+}
+
 /**
   *  Main Pages
   */
@@ -252,7 +305,7 @@ code {
   max-width: 50%;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   #main-doc {
     position: relative;
     left: 0;

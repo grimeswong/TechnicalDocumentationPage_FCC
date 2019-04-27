@@ -4,7 +4,7 @@ $(document).ready(function(){
         $(this).siblings('.nav-sub-links').toggle('fast');
     });
 
-    $('.open-btn-tablet').click(function() {
+    $('.open-btn').click(function() {
         $('#navbar').css('left','0');
         $('#main-doc').css('margin-left','14%');
         $('#main-doc').addClass('overlay');
@@ -13,8 +13,8 @@ $(document).ready(function(){
 
     });
 
-    $('.close-btn-tablet').click(function() {
-        $('#navbar').css('left','-40%');
+    $('.close-btn').click(function() {
+        $('#navbar').css('left','-100%');
         $('#main-doc').css('margin-left', '0');
         $('#main-doc').removeClass('overlay');
         $('pre').removeClass('overlay');

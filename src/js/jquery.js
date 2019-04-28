@@ -24,7 +24,6 @@ $(document).ready(function(){
       */
     if ($(window).outerWidth() < 768) {
       $('.nav-sub-links').click(function() {
-        console.log("sub link is clicked");
         closeButtonAction();
       });
     }

@@ -6,7 +6,9 @@ $(document).ready(function(){
 
     $('.open-btn').click(function() {
         $('#navbar').css('left','0');
-        $('#main-doc').css('margin-left','14%');
+        if ($(window).outerWidth() > 767) {
+          $('#main-doc').css('margin-left','14%');
+        }
         $('#main-doc').addClass('overlay');
         $('pre').addClass('overlay');
         $('.section-box-container').addClass('overlay');

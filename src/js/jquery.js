@@ -16,11 +16,25 @@ $(document).ready(function(){
     });
 
     $('.close-btn').click(function() {
-        $('#navbar').css('left','-100%');
-        $('#main-doc').css('margin-left', '0');
-        $('#main-doc').removeClass('overlay');
-        $('pre').removeClass('overlay');
-        $('.section-box-container').removeClass('overlay');
+      closeButtonAction();
     });
 
+    /*** For mobile view only
+      *  close the navbar when a sub link is clicked
+      */
+    if ($(window).outerWidth() < 768) {
+      $('.nav-sub-links').click(function() {
+        console.log("sub link is clicked");
+        closeButtonAction();
+      });
+    }
+
 });
+
+function closeButtonAction() {
+      $('#navbar').css('left','-100%');
+      $('#main-doc').css('margin-left', '0');
+      $('#main-doc').removeClass('overlay');
+      $('pre').removeClass('overlay');
+      $('.section-box-container').removeClass('overlay');
+}
